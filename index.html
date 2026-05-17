@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -151,11 +151,11 @@
     .map-section .tip { font-size: 0.8em; color: var(--text-dimmer); margin-bottom: 20px; }
     .map-container { max-width: 700px; margin: 0 auto; position: relative; }
     .map-container svg { width: 100%; height: auto; }
-    #brazil-map path { fill: var(--map-fill); stroke: var(--map-stroke); stroke-width: 0.8; transition: fill 0.3s, stroke 0.3s; }
-    #brazil-map path.active { fill: var(--map-active); }
-    #brazil-map path.active:hover { fill: var(--gold); cursor: pointer; }
-    #brazil-map text { pointer-events: none; }
-    #brazil-map .circle { display: none; }
+    #uk-map path { fill: var(--map-fill); stroke: var(--map-stroke); stroke-width: 0.8; transition: fill 0.3s, stroke 0.3s; }
+    #uk-map path.active { fill: var(--map-active); }
+    #uk-map path.active:hover { fill: var(--gold); cursor: pointer; }
+    #uk-map text { pointer-events: none; }
+    #uk-map .circle { display: none; }
     .map-pin { position: absolute; transform: translate(-50%,-100%); cursor: pointer; transition: transform 0.2s; text-align: center; }
     .map-pin:hover { transform: translate(-50%,-100%) scale(1.2); }
     .map-pin .pin-icon { font-size: 1.6em; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
@@ -176,11 +176,11 @@
     .map-section { text-align: center; padding: 50px 20px 30px; }
     .map-section .tip { font-size: 0.8em; color: var(--text-dimmer); margin-bottom: 20px; }
     .map-section .tip span { color: var(--gold); }
-    .brazil-map {
+    .uk-map {
       max-width: 600px; margin: 0 auto; padding: 30px;
       background: var(--bg2); border-radius: 16px; border: 1px solid #2a2a45;
     }
-    .brazil-map svg { width: 100%; height: auto; }
+    .uk-map svg { width: 100%; height: auto; }
     .map-pin { fill: #FFD700; filter: drop-shadow(0 0 4px rgba(255,215,0,0.5)); }
 
     /* Filter bar */
@@ -804,12 +804,12 @@
     <div class="apply-form" id="applyForm">
       <br>
       <label>Full Name</label>
-      <input type="text" id="applyName" placeholder="e.g. Jan Kowalski" required>
+      <input type="text" id="applyName" placeholder="e.g. Daniel Gaina" required>
       <label>City</label>
-      <input type="text" id="applyCity" placeholder="e.g. Warszawa">
+      <input type="text" id="applyCity" placeholder="e.g. Manchester">
       <label>State</label>
       <select id="applyState">
-        <option value="">Select voivodeship...</option>
+        <option value="">Select region...</option>
         <option value="DS">Dolnośląskie</option>
         <option value="KP">Kujawsko-Pomorskie</option>
         <option value="LB">Lubuskie</option>
@@ -915,7 +915,7 @@
       
       if(!name||!email){s.innerHTML='<span style="color:#f44336">Please fill in name and email</span>';return;}
       s.innerHTML='<span style="color:var(--gold)">Sending...</span>';
-      fetch('https://POLAND-API-PLACEHOLDER.execute-api.eu-central-1.amazonaws.com/sponsor',{method:'POST',headers:{'Content-Type':'application/json'},
+      fetch('https://kqiq2bltjd.execute-api.us-east-1.amazonaws.com/sponsor',{method:'POST',headers:{'Content-Type':'application/json'},
         body:JSON.stringify({name:name,company:company,email:email})
       }).then(function(){
         var n=document.getElementById('sponsorName').value;var e=document.getElementById('sponsorEmail').value;document.getElementById('sponsorForm').innerHTML='<p style="color:#4CAF50;font-size:1.1em;margin-bottom:8px;">✅ Thank you, '+n+'!</p><p style="color:var(--text-muted);font-size:0.9em;">We received your interest and our team will reach out to <strong>'+e+'</strong> within 48 hours with our sponsorship options.</p><p style="color:var(--gold);font-size:0.85em;margin-top:12px;">Golden Jackets UK 🏆</p>';
@@ -1050,7 +1050,7 @@ async function submitApplication() {
         reader.readAsDataURL(file);
       });
     }
-    var resp = await fetch('https://POLAND-API-PLACEHOLDER.execute-api.eu-central-1.amazonaws.com/apply', {
+    var resp = await fetch('https://kqiq2bltjd.execute-api.us-east-1.amazonaws.com/apply', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -1220,7 +1220,7 @@ setInterval(updateCountdowns, 1000);
           var isNew = !localStorage.getItem(key);
           localStorage.setItem(key, (parseInt(localStorage.getItem(key)||'0')+1).toString());
           var data = new Blob([JSON.stringify({partner:partners[domain],visitorId:vid,isUnique:isNew})],{type:'application/json'});
-          navigator.sendBeacon('https://POLAND-API-PLACEHOLDER.execute-api.eu-central-1.amazonaws.com/click', data);
+          navigator.sendBeacon('https://kqiq2bltjd.execute-api.us-east-1.amazonaws.com/click', data);
         });
         break;
       }
