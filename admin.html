@@ -129,7 +129,7 @@
         <div class="label">Architecture</div>
         <div class="desc">Live infrastructure diagram</div>
       </div>
-      <a class="tool-btn" href="https://github.com/goldenjackets-community/golden-jackets-uk/blob/main/README.md" target="_blank">
+      <a class="tool-btn" href="https://github.com/goldenjackets-community/golden-jackets-uk/blob/master/README.md" target="_blank">
         <div class="icon">📖</div>
         <div class="label">README</div>
         <div class="desc">Project documentation</div>
@@ -293,7 +293,7 @@ async function showBacklog() {
   out.style.display = 'block';
   out.innerHTML = '<span style="color:#FFD700;">Loading backlog...</span>';
   try {
-    var resp = await fetch('https://raw.githubusercontent.com/goldenjackets-community/golden-jackets-uk/main/BACKLOG.md?t='+Date.now());
+    var resp = await fetch('https://raw.githubusercontent.com/goldenjackets-community/golden-jackets-uk/master/BACKLOG.md?t='+Date.now());
     var md = await resp.text();
     var lines = md.split('\n');
     var html = '';
