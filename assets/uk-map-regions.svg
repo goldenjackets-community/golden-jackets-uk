@@ -959,6 +959,6 @@
 <text x="640" y="740" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">SE</text>
 <text x="500" y="720" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">SW</text>
 <!-- Manchester Pin -->
-<circle cx="545" cy="445" r="8" fill="#FFD700" opacity="0.9"/>
-<text x="545" y="435" fill="#FFD700" font-size="12" text-anchor="middle" font-weight="700" font-family="Arial">1</text>
+<circle cx="555" cy="460" r="8" fill="#FFD700" opacity="0.9"/>
+<text x="555" y="450" fill="#FFD700" font-size="12" text-anchor="middle" font-weight="700" font-family="Arial">1</text>
 </svg>
