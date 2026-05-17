@@ -955,9 +955,9 @@
 <text x="580" y="550" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">WM</text>
 <text x="660" y="560" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">EM</text>
 <text x="720" y="630" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">EE</text>
-<text x="640" y="680" fill="#FFD700" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">LDN</text>
-<text x="640" y="740" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">SE</text>
-<text x="500" y="720" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">SW</text>
+<text x="760" y="835" fill="#FFD700" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">LDN</text>
+<text x="720" y="860" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">SE</text>
+<text x="600" y="880" fill="#888" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial">SW</text>
 <!-- Golden Jacket Pin - Manchester -->
 <circle cx="673" cy="687" r="10" fill="#FFD700" opacity="0.9" stroke="#151528" stroke-width="2"/>
 <text x="673" y="692" fill="#151528" font-size="11" text-anchor="middle" font-weight="700" font-family="Arial">1</text>
