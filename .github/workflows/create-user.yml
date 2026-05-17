@@ -3,7 +3,7 @@ name: Create Cognito User
 on:
   pull_request:
     types: [closed]
-    branches: [main]
+    branches: [master]
 
 permissions:
   id-token: write
