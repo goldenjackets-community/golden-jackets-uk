@@ -84,12 +84,12 @@
         <div class="label">Restore</div>
         <div class="desc">Restore site from latest backup</div>
       </div>
-      <a class="tool-btn" href="https://github.com/ricardogulias/golden-jackets-brazil/pulls" target="_blank">
+      <a class="tool-btn" href="https://github.com/goldenjackets-community/golden-jackets-uk/pulls" target="_blank">
         <div class="icon">🔀</div>
         <div class="label">Open PRs</div>
         <div class="desc">Review pending pull requests</div>
       </a>
-      <a class="tool-btn" href="https://github.com/ricardogulias/golden-jackets-brazil/actions" target="_blank">
+      <a class="tool-btn" href="https://github.com/goldenjackets-community/golden-jackets-uk/actions" target="_blank">
         <div class="icon">🚀</div>
         <div class="label">Deployments</div>
         <div class="desc">GitHub Actions status</div>
@@ -129,7 +129,7 @@
         <div class="label">Architecture</div>
         <div class="desc">Live infrastructure diagram</div>
       </div>
-      <a class="tool-btn" href="https://github.com/ricardogulias/golden-jackets-brazil/blob/main/README.md" target="_blank">
+      <a class="tool-btn" href="https://github.com/goldenjackets-community/golden-jackets-uk/blob/main/README.md" target="_blank">
         <div class="icon">📖</div>
         <div class="label">README</div>
         <div class="desc">Project documentation</div>
@@ -199,12 +199,12 @@ async function adminCall(action, extra) {
   out.innerHTML = '<span style="color:#FFD700;">Loading...</span>';
   try {
     var body = Object.assign({action: action}, extra || {});
-    var resp = await fetch(ADMIN_API, {method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+sessionStorage.getItem('gj_token')}, body: JSON.stringify(Object.assign(body, {chapter: 'brazil'}))});
+    var resp = await fetch(ADMIN_API, {method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+sessionStorage.getItem('gj_token')}, body: JSON.stringify(Object.assign(body, {chapter: GJ_CONFIG.CHAPTER}))});
     // If unauthorized, try refresh token
     if (resp.status === 401 || resp.status === 403) {
       var refreshed = await refreshSession();
       if (refreshed) {
-        resp = await fetch(ADMIN_API, {method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+sessionStorage.getItem('gj_token')}, body: JSON.stringify(Object.assign(body, {chapter: 'brazil'}))});
+        resp = await fetch(ADMIN_API, {method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+sessionStorage.getItem('gj_token')}, body: JSON.stringify(Object.assign(body, {chapter: GJ_CONFIG.CHAPTER}))});
       } else {
         out.innerHTML = '<span style="color:#f44336;">Session expired. Please <a href="/members.html" style="color:#FFD700;">log in again</a>.</span>';
         return null;
@@ -293,7 +293,7 @@ async function showBacklog() {
   out.style.display = 'block';
   out.innerHTML = '<span style="color:#FFD700;">Loading backlog...</span>';
   try {
-    var resp = await fetch('https://raw.githubusercontent.com/ricardogulias/golden-jackets-brazil/main/BACKLOG.md?t='+Date.now());
+    var resp = await fetch('https://raw.githubusercontent.com/goldenjackets-community/golden-jackets-uk/main/BACKLOG.md?t='+Date.now());
     var md = await resp.text();
     var lines = md.split('\n');
     var html = '';
