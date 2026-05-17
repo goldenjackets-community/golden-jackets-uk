@@ -1157,11 +1157,6 @@ function applyLang() {
 }
 
 if (currentLang === 'pl') {
-  window.addEventListener('DOMContentLoaded', function() {
-    applyLang();
-    document.querySelectorAll('.lang-toggle').forEach(function(b) { b.innerHTML = '<img src="https://flagcdn.com/w40/us.png" width="20" height="14" alt="EN" class="flag-img">'; });
-  });
-}
 
 function toggleTheme() {
   document.body.classList.toggle('light');
