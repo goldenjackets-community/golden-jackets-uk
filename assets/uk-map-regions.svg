@@ -312,317 +312,317 @@
   </path>
  </g>
  <g id="points">
-  <circle class="50.45652698633212|-12.9181900793958" cx="174.1" cy="914.5" id="0">
+  <circle style="display:none" class="50.45652698633212|-12.9181900793958" cx="174.1" cy="914.5" id="0">
   </circle>
-  <circle class="54.83183622502271|-5.186948213106515" cx="536.2" cy="576.4" id="1">
+  <circle style="display:none" class="54.83183622502271|-5.186948213106515" cx="536.2" cy="576.4" id="1">
   </circle>
-  <circle class="60.30097277338595|0.9980452799249111" cx="825.9" cy="97.6" id="2">
+  <circle style="display:none" class="60.30097277338595|0.9980452799249111" cx="825.9" cy="97.6" id="2">
   </circle>
  </g>
  <g id="label_points">
-  <circle class="Cheshire West and Chester" cx="650.3" cy="709.1" id="GBCHW">
+  <circle style="display:none" class="Cheshire West and Chester" cx="650.3" cy="709.1" id="GBCHW">
   </circle>
-  <circle class="Shropshire" cx="649.7" cy="755.2" id="GBSHR">
+  <circle style="display:none" class="Shropshire" cx="649.7" cy="755.2" id="GBSHR">
   </circle>
-  <circle class="Herefordshire" cx="650.5" cy="791.3" id="GBHEF">
+  <circle style="display:none" class="Herefordshire" cx="650.5" cy="791.3" id="GBHEF">
   </circle>
-  <circle class="Gloucestershire" cx="682.7" cy="811.7" id="GBGLS">
+  <circle style="display:none" class="Gloucestershire" cx="682.7" cy="811.7" id="GBGLS">
   </circle>
-  <circle class="Northumberland" cx="684.6" cy="547.2" id="GBNBL">
+  <circle style="display:none" class="Northumberland" cx="684.6" cy="547.2" id="GBNBL">
   </circle>
-  <circle class="Cumbria" cx="641.3" cy="594.9" id="GBCMA">
+  <circle style="display:none" class="Cumbria" cx="641.3" cy="594.9" id="GBCMA">
   </circle>
-  <circle class="North Tyneside" cx="709.4" cy="561.3" id="GBNTY">
+  <circle style="display:none" class="North Tyneside" cx="709.4" cy="561.3" id="GBNTY">
   </circle>
-  <circle class="South Tyneside" cx="711.7" cy="566.5" id="GBSTY">
+  <circle style="display:none" class="South Tyneside" cx="711.7" cy="566.5" id="GBSTY">
   </circle>
-  <circle class="Sunderland" cx="710.7" cy="574.6" id="GBSND">
+  <circle style="display:none" class="Sunderland" cx="710.7" cy="574.6" id="GBSND">
   </circle>
-  <circle class="Durham" cx="687.9" cy="590.8" id="GBDUR">
+  <circle style="display:none" class="Durham" cx="687.9" cy="590.8" id="GBDUR">
   </circle>
-  <circle class="Hartlepool" cx="720.5" cy="589.9" id="GBHPL">
+  <circle style="display:none" class="Hartlepool" cx="720.5" cy="589.9" id="GBHPL">
   </circle>
-  <circle class="Redcar and Cleveland" cx="731" cy="599" id="GBRCC">
+  <circle style="display:none" class="Redcar and Cleveland" cx="731" cy="599" id="GBRCC">
   </circle>
-  <circle class="North Yorkshire" cx="704.7" cy="627.2" id="GBNYK">
+  <circle style="display:none" class="North Yorkshire" cx="704.7" cy="627.2" id="GBNYK">
   </circle>
-  <circle class="East Riding of Yorkshire" cx="753.9" cy="651.4" id="GBERY">
+  <circle style="display:none" class="East Riding of Yorkshire" cx="753.9" cy="651.4" id="GBERY">
   </circle>
-  <circle class="Kingston upon Hull" cx="761.4" cy="662.7" id="GBKHL">
+  <circle style="display:none" class="Kingston upon Hull" cx="761.4" cy="662.7" id="GBKHL">
   </circle>
-  <circle class="North Lincolnshire" cx="749.8" cy="674.4" id="GBNLN">
+  <circle style="display:none" class="North Lincolnshire" cx="749.8" cy="674.4" id="GBNLN">
   </circle>
-  <circle class="North East Lincolnshire" cx="773.5" cy="681" id="GBNEL">
+  <circle style="display:none" class="North East Lincolnshire" cx="773.5" cy="681" id="GBNEL">
   </circle>
-  <circle class="Lincolnshire" cx="765.6" cy="712.8" id="GBLIN">
+  <circle style="display:none" class="Lincolnshire" cx="765.6" cy="712.8" id="GBLIN">
   </circle>
-  <circle class="Norfolk" cx="823.6" cy="748.3" id="GBNFK">
+  <circle style="display:none" class="Norfolk" cx="823.6" cy="748.3" id="GBNFK">
   </circle>
-  <circle class="Suffolk" cx="826.3" cy="786.8" id="GBSFK">
+  <circle style="display:none" class="Suffolk" cx="826.3" cy="786.8" id="GBSFK">
   </circle>
-  <circle class="Essex" cx="800.9" cy="813.8" id="GBESS">
+  <circle style="display:none" class="Essex" cx="800.9" cy="813.8" id="GBESS">
   </circle>
-  <circle class="Southend-on-Sea" cx="813" cy="833" id="GBSOS">
+  <circle style="display:none" class="Southend-on-Sea" cx="813" cy="833" id="GBSOS">
   </circle>
-  <circle class="Thurrock" cx="796.6" cy="836.7" id="GBTHR">
+  <circle style="display:none" class="Thurrock" cx="796.6" cy="836.7" id="GBTHR">
   </circle>
-  <circle class="Kent" cx="815.7" cy="861.1" id="GBKEN">
+  <circle style="display:none" class="Kent" cx="815.7" cy="861.1" id="GBKEN">
   </circle>
-  <circle class="Medway" cx="804.9" cy="840.6" id="GBMDW">
+  <circle style="display:none" class="Medway" cx="804.9" cy="840.6" id="GBMDW">
   </circle>
-  <circle class="East Sussex" cx="788.8" cy="879.1" id="GBESX">
+  <circle style="display:none" class="East Sussex" cx="788.8" cy="879.1" id="GBESX">
   </circle>
-  <circle class="Brighton and Hove" cx="773" cy="885.5" id="GBBNH">
+  <circle style="display:none" class="Brighton and Hove" cx="773" cy="885.5" id="GBBNH">
   </circle>
-  <circle class="West Sussex" cx="756.5" cy="878.3" id="GBWSX">
+  <circle style="display:none" class="West Sussex" cx="756.5" cy="878.3" id="GBWSX">
   </circle>
-  <circle class="Hampshire" cx="726.1" cy="866.7" id="GBHAM">
+  <circle style="display:none" class="Hampshire" cx="726.1" cy="866.7" id="GBHAM">
   </circle>
-  <circle class="Portsmouth" cx="729.6" cy="887.7" id="GBPOR">
+  <circle style="display:none" class="Portsmouth" cx="729.6" cy="887.7" id="GBPOR">
   </circle>
-  <circle class="Southampton" cx="715.1" cy="880.7" id="GBSTH">
+  <circle style="display:none" class="Southampton" cx="715.1" cy="880.7" id="GBSTH">
   </circle>
-  <circle class="Dorset" cx="671.2" cy="889.3" id="GBDOR">
+  <circle style="display:none" class="Dorset" cx="671.2" cy="889.3" id="GBDOR">
   </circle>
-  <circle class="Bournemouth" cx="690.3" cy="894" id="GBBMH">
+  <circle style="display:none" class="Bournemouth" cx="690.3" cy="894" id="GBBMH">
   </circle>
-  <circle class="Poole" cx="687.2" cy="893.4" id="GBPOL">
+  <circle style="display:none" class="Poole" cx="687.2" cy="893.4" id="GBPOL">
   </circle>
-  <circle class="Devon" cx="597.4" cy="892.5" id="GBDEV">
+  <circle style="display:none" class="Devon" cx="597.4" cy="892.5" id="GBDEV">
   </circle>
-  <circle class="Torbay" cx="610.8" cy="914.8" id="GBTOB">
+  <circle style="display:none" class="Torbay" cx="610.8" cy="914.8" id="GBTOB">
   </circle>
-  <circle class="Plymouth" cx="585.8" cy="918.5" id="GBPLY">
+  <circle style="display:none" class="Plymouth" cx="585.8" cy="918.5" id="GBPLY">
   </circle>
-  <circle class="Cornwall" cx="567.5" cy="907.3" id="GBCON">
+  <circle style="display:none" class="Cornwall" cx="567.5" cy="907.3" id="GBCON">
   </circle>
-  <circle class="Somerset" cx="647.5" cy="868.5" id="GBSOM">
+  <circle style="display:none" class="Somerset" cx="647.5" cy="868.5" id="GBSOM">
   </circle>
-  <circle class="North Somerset" cx="649.1" cy="843.8" id="GBNSM">
+  <circle style="display:none" class="North Somerset" cx="649.1" cy="843.8" id="GBNSM">
   </circle>
-  <circle class="Bristol" cx="658.5" cy="841.8" id="GBBST">
+  <circle style="display:none" class="Bristol" cx="658.5" cy="841.8" id="GBBST">
   </circle>
-  <circle class="South Gloucestershire" cx="664.3" cy="834.1" id="GBSGC">
+  <circle style="display:none" class="South Gloucestershire" cx="664.3" cy="834.1" id="GBSGC">
   </circle>
-  <circle class="Halton" cx="635.9" cy="693.3" id="GBWRL">
+  <circle style="display:none" class="Halton" cx="635.9" cy="693.3" id="GBWRL">
   </circle>
-  <circle class="Halton" cx="653.5" cy="696.6" id="GBHAL">
+  <circle style="display:none" class="Halton" cx="653.5" cy="696.6" id="GBHAL">
   </circle>
-  <circle class="Knowsley" cx="646.1" cy="688.5" id="GBKWL">
+  <circle style="display:none" class="Knowsley" cx="646.1" cy="688.5" id="GBKWL">
   </circle>
-  <circle class="Liverpool" cx="640.9" cy="688" id="GBLIV">
+  <circle style="display:none" class="Liverpool" cx="640.9" cy="688" id="GBLIV">
   </circle>
-  <circle class="Sefton" cx="636.5" cy="676.4" id="GBSFT">
+  <circle style="display:none" class="Sefton" cx="636.5" cy="676.4" id="GBSFT">
   </circle>
-  <circle class="Lancashire" cx="655.8" cy="649.5" id="GBLAN">
+  <circle style="display:none" class="Lancashire" cx="655.8" cy="649.5" id="GBLAN">
   </circle>
-  <circle class="Blackpool" cx="638.6" cy="656.1" id="GBBPL">
+  <circle style="display:none" class="Blackpool" cx="638.6" cy="656.1" id="GBBPL">
   </circle>
-  <circle class="Isle of Wight" cx="718.7" cy="898.2" id="GBIOW">
+  <circle style="display:none" class="Isle of Wight" cx="718.7" cy="898.2" id="GBIOW">
   </circle>
-  <circle class="Isles of Scilly" cx="484.2" cy="953.7" id="GBIOS">
+  <circle style="display:none" class="Isles of Scilly" cx="484.2" cy="953.7" id="GBIOS">
   </circle>
-  <circle class="Wandsworth" cx="771.5" cy="840.8" id="GBWND">
+  <circle style="display:none" class="Wandsworth" cx="771.5" cy="840.8" id="GBWND">
   </circle>
-  <circle class="Merton" cx="770.1" cy="843.7" id="GBMRT">
+  <circle style="display:none" class="Merton" cx="770.1" cy="843.7" id="GBMRT">
   </circle>
-  <circle class="Westminster" cx="771.9" cy="836" id="GBWSM">
+  <circle style="display:none" class="Westminster" cx="771.9" cy="836" id="GBWSM">
   </circle>
-  <circle class="Kensington and Chelsea" cx="770.5" cy="837.2" id="GBKEC">
+  <circle style="display:none" class="Kensington and Chelsea" cx="770.5" cy="837.2" id="GBKEC">
   </circle>
-  <circle class="Hounslow" cx="762.5" cy="839.1" id="GBHNS">
+  <circle style="display:none" class="Hounslow" cx="762.5" cy="839.1" id="GBHNS">
   </circle>
-  <circle class="Ealing" cx="763.8" cy="835.4" id="GBEAL">
+  <circle style="display:none" class="Ealing" cx="763.8" cy="835.4" id="GBEAL">
   </circle>
-  <circle class="Hammersmith and Fulham" cx="769" cy="837.2" id="GBHMF">
+  <circle style="display:none" class="Hammersmith and Fulham" cx="769" cy="837.2" id="GBHMF">
   </circle>
-  <circle class="Stockton-on-Tees" cx="716.1" cy="599.1" id="GBSTT">
+  <circle style="display:none" class="Stockton-on-Tees" cx="716.1" cy="599.1" id="GBSTT">
   </circle>
-  <circle class="Darlington" cx="707.8" cy="601.2" id="GBDAL">
+  <circle style="display:none" class="Darlington" cx="707.8" cy="601.2" id="GBDAL">
   </circle>
-  <circle class="Middlesbrough" cx="720.5" cy="600.6" id="GBMDB">
+  <circle style="display:none" class="Middlesbrough" cx="720.5" cy="600.6" id="GBMDB">
   </circle>
-  <circle class="Richmond upon Thames" cx="763.7" cy="842.5" id="GBRIC">
+  <circle style="display:none" class="Richmond upon Thames" cx="763.7" cy="842.5" id="GBRIC">
   </circle>
-  <circle class="City" cx="775" cy="835.5" id="GBLND">
+  <circle style="display:none" class="City" cx="775" cy="835.5" id="GBLND">
   </circle>
-  <circle class="Tower Hamlets" cx="778.2" cy="835.7" id="GBTWH">
+  <circle style="display:none" class="Tower Hamlets" cx="778.2" cy="835.7" id="GBTWH">
   </circle>
-  <circle class="Gateshead" cx="699.5" cy="567.3" id="GBGAT">
+  <circle style="display:none" class="Gateshead" cx="699.5" cy="567.3" id="GBGAT">
   </circle>
-  <circle class="Newcastle upon Tyne" cx="703" cy="562.1" id="GBNET">
+  <circle style="display:none" class="Newcastle upon Tyne" cx="703" cy="562.1" id="GBNET">
   </circle>
-  <circle class="York" cx="728.2" cy="647.4" id="GBYOR">
+  <circle style="display:none" class="York" cx="728.2" cy="647.4" id="GBYOR">
   </circle>
-  <circle class="Merseyside" cx="651.2" cy="687.9" id="GBSHN">
+  <circle style="display:none" class="Merseyside" cx="651.2" cy="687.9" id="GBSHN">
   </circle>
-  <circle class="Enfield" cx="775.3" cy="826" id="GBENF">
+  <circle style="display:none" class="Enfield" cx="775.3" cy="826" id="GBENF">
   </circle>
-  <circle class="Hertfordshire" cx="772.8" cy="810" id="GBHRT">
+  <circle style="display:none" class="Hertfordshire" cx="772.8" cy="810" id="GBHRT">
   </circle>
-  <circle class="Barnet" cx="769.9" cy="828.8" id="GBBNE">
+  <circle style="display:none" class="Barnet" cx="769.9" cy="828.8" id="GBBNE">
   </circle>
-  <circle class="Waltham Forest" cx="778.9" cy="830" id="GBWFT">
+  <circle style="display:none" class="Waltham Forest" cx="778.9" cy="830" id="GBWFT">
   </circle>
-  <circle class="Redbridge" cx="783.4" cy="831.3" id="GBRDB">
+  <circle style="display:none" class="Redbridge" cx="783.4" cy="831.3" id="GBRDB">
   </circle>
-  <circle class="Havering" cx="790.3" cy="832.2" id="GBHAV">
+  <circle style="display:none" class="Havering" cx="790.3" cy="832.2" id="GBHAV">
   </circle>
-  <circle class="Cambridgeshire" cx="781.4" cy="774.1" id="GBCAM">
+  <circle style="display:none" class="Cambridgeshire" cx="781.4" cy="774.1" id="GBCAM">
   </circle>
-  <circle class="Bexley" cx="786.3" cy="840" id="GBBEX">
+  <circle style="display:none" class="Bexley" cx="786.3" cy="840" id="GBBEX">
   </circle>
-  <circle class="Sutton" cx="771.6" cy="847.3" id="GBSTN">
+  <circle style="display:none" class="Sutton" cx="771.6" cy="847.3" id="GBSTN">
   </circle>
-  <circle class="Milton Keynes" cx="744.7" cy="793.9" id="GBMIK">
+  <circle style="display:none" class="Milton Keynes" cx="744.7" cy="793.9" id="GBMIK">
   </circle>
-  <circle class="Buckinghamshire" cx="737.9" cy="809.1" id="GBBKM">
+  <circle style="display:none" class="Buckinghamshire" cx="737.9" cy="809.1" id="GBBKM">
   </circle>
-  <circle class="Hillingdon" cx="759" cy="831.8" id="GBHIL">
+  <circle style="display:none" class="Hillingdon" cx="759" cy="831.8" id="GBHIL">
   </circle>
-  <circle class="Brent" cx="766.8" cy="832.7" id="GBBEN">
+  <circle style="display:none" class="Brent" cx="766.8" cy="832.7" id="GBBEN">
   </circle>
-  <circle class="Luton" cx="760.4" cy="808.5" id="GBLUT">
+  <circle style="display:none" class="Luton" cx="760.4" cy="808.5" id="GBLUT">
   </circle>
-  <circle class="Harrow" cx="762.9" cy="830.4" id="GBHRW">
+  <circle style="display:none" class="Harrow" cx="762.9" cy="830.4" id="GBHRW">
   </circle>
-  <circle class="Central Bedfordshire" cx="754" cy="800.4" id="GBCBF">
+  <circle style="display:none" class="Central Bedfordshire" cx="754" cy="800.4" id="GBCBF">
   </circle>
-  <circle class="Bedford" cx="757" cy="785.9" id="GBBDF">
+  <circle style="display:none" class="Bedford" cx="757" cy="785.9" id="GBBDF">
   </circle>
-  <circle class="Rutland" cx="748.5" cy="749.3" id="GBRUT">
+  <circle style="display:none" class="Rutland" cx="748.5" cy="749.3" id="GBRUT">
   </circle>
-  <circle class="Nottinghamshire" cx="733.7" cy="711.6" id="GBNTT">
+  <circle style="display:none" class="Nottinghamshire" cx="733.7" cy="711.6" id="GBNTT">
   </circle>
-  <circle class="Northamptonshire" cx="737" cy="777.8" id="GBNTH">
+  <circle style="display:none" class="Northamptonshire" cx="737" cy="777.8" id="GBNTH">
   </circle>
-  <circle class="Camden" cx="772.3" cy="833.3" id="GBCMD">
+  <circle style="display:none" class="Camden" cx="772.3" cy="833.3" id="GBCMD">
   </circle>
-  <circle class="Islington" cx="774.7" cy="833.6" id="GBISL">
+  <circle style="display:none" class="Islington" cx="774.7" cy="833.6" id="GBISL">
   </circle>
-  <circle class="Peterborough" cx="764.8" cy="754.4" id="GBPTE">
+  <circle style="display:none" class="Peterborough" cx="764.8" cy="754.4" id="GBPTE">
   </circle>
-  <circle class="Lambeth" cx="773.9" cy="840.4" id="GBLBH">
+  <circle style="display:none" class="Lambeth" cx="773.9" cy="840.4" id="GBLBH">
   </circle>
-  <circle class="Southwark" cx="775.9" cy="838.1" id="GBSWK">
+  <circle style="display:none" class="Southwark" cx="775.9" cy="838.1" id="GBSWK">
   </circle>
-  <circle class="Doncaster" cx="729.1" cy="680.6" id="GBDNC">
+  <circle style="display:none" class="Doncaster" cx="729.1" cy="680.6" id="GBDNC">
   </circle>
-  <circle class="Croydon" cx="775.8" cy="847.9" id="GBCRY">
+  <circle style="display:none" class="Croydon" cx="775.8" cy="847.9" id="GBCRY">
   </circle>
-  <circle class="Lewisham" cx="778.7" cy="841.3" id="GBLEW">
+  <circle style="display:none" class="Lewisham" cx="778.7" cy="841.3" id="GBLEW">
   </circle>
-  <circle class="Haringey" cx="774.6" cy="830.3" id="GBHRY">
+  <circle style="display:none" class="Haringey" cx="774.6" cy="830.3" id="GBHRY">
   </circle>
-  <circle class="Kingston upon Thames" cx="766.5" cy="844.8" id="GBKTT">
+  <circle style="display:none" class="Kingston upon Thames" cx="766.5" cy="844.8" id="GBKTT">
   </circle>
-  <circle class="Newham" cx="781.3" cy="835.1" id="GBNWM">
+  <circle style="display:none" class="Newham" cx="781.3" cy="835.1" id="GBNWM">
   </circle>
-  <circle class="Greenwich" cx="782" cy="839.7" id="GBGRE">
+  <circle style="display:none" class="Greenwich" cx="782" cy="839.7" id="GBGRE">
   </circle>
-  <circle class="Hackney" cx="776.7" cy="833.2" id="GBHCK">
+  <circle style="display:none" class="Hackney" cx="776.7" cy="833.2" id="GBHCK">
   </circle>
-  <circle class="Barking and Dagenham" cx="785.9" cy="834.5" id="GBBDG">
+  <circle style="display:none" class="Barking and Dagenham" cx="785.9" cy="834.5" id="GBBDG">
   </circle>
-  <circle class="Leicestershire" cx="735.1" cy="747.7" id="GBLEC">
+  <circle style="display:none" class="Leicestershire" cx="735.1" cy="747.7" id="GBLEC">
   </circle>
-  <circle class="Cheshire East" cx="672.1" cy="705.7" id="GBCHE">
+  <circle style="display:none" class="Cheshire East" cx="672.1" cy="705.7" id="GBCHE">
   </circle>
-  <circle class="Derbyshire" cx="705.6" cy="713.2" id="GBDBY">
+  <circle style="display:none" class="Derbyshire" cx="705.6" cy="713.2" id="GBDBY">
   </circle>
-  <circle class="Rotherham" cx="717.8" cy="691.2" id="GBROT">
+  <circle style="display:none" class="Rotherham" cx="717.8" cy="691.2" id="GBROT">
   </circle>
-  <circle class="Sheffield" cx="707.6" cy="691.7" id="GBSHF">
+  <circle style="display:none" class="Sheffield" cx="707.6" cy="691.7" id="GBSHF">
   </circle>
-  <circle class="Stoke-on-Trent" cx="677.5" cy="721.5" id="GBSTE">
+  <circle style="display:none" class="Stoke-on-Trent" cx="677.5" cy="721.5" id="GBSTE">
   </circle>
-  <circle class="Telford and Wrekin" cx="663.9" cy="744" id="GBTFW">
+  <circle style="display:none" class="Telford and Wrekin" cx="663.9" cy="744" id="GBTFW">
   </circle>
-  <circle class="Staffordshire" cx="686.2" cy="734.9" id="GBSTS">
+  <circle style="display:none" class="Staffordshire" cx="686.2" cy="734.9" id="GBSTS">
   </circle>
-  <circle class="Bromley" cx="782.3" cy="847.1" id="GBBRY">
+  <circle style="display:none" class="Bromley" cx="782.3" cy="847.1" id="GBBRY">
   </circle>
-  <circle class="Worcestershire" cx="677.8" cy="781.4" id="GBWOR">
+  <circle style="display:none" class="Worcestershire" cx="677.8" cy="781.4" id="GBWOR">
   </circle>
-  <circle class="Warwickshire" cx="705.1" cy="783.4" id="GBWAR">
+  <circle style="display:none" class="Warwickshire" cx="705.1" cy="783.4" id="GBWAR">
   </circle>
-  <circle class="Oxfordshire" cx="714.4" cy="815.9" id="GBOXF">
+  <circle style="display:none" class="Oxfordshire" cx="714.4" cy="815.9" id="GBOXF">
   </circle>
-  <circle class="Wigan" cx="656.6" cy="680.3" id="GBWGN">
+  <circle style="display:none" class="Wigan" cx="656.6" cy="680.3" id="GBWGN">
   </circle>
-  <circle class="Stockport" cx="677.5" cy="692.1" id="GBSKP">
+  <circle style="display:none" class="Stockport" cx="677.5" cy="692.1" id="GBSKP">
   </circle>
-  <circle class="Warrington" cx="659.7" cy="692.6" id="GBWRT">
+  <circle style="display:none" class="Warrington" cx="659.7" cy="692.6" id="GBWRT">
   </circle>
-  <circle class="West Berkshire" cx="716.9" cy="840.1" id="GBWBK">
+  <circle style="display:none" class="West Berkshire" cx="716.9" cy="840.1" id="GBWBK">
   </circle>
-  <circle class="Wokingham" cx="736.8" cy="843.1" id="GBWOK">
+  <circle style="display:none" class="Wokingham" cx="736.8" cy="843.1" id="GBWOK">
   </circle>
-  <circle class="Bracknell Forest" cx="743.5" cy="844.2" id="GBBRC">
+  <circle style="display:none" class="Bracknell Forest" cx="743.5" cy="844.2" id="GBBRC">
   </circle>
-  <circle class="Royal Borough of Windsor and Maidenhead" cx="744.1" cy="836.2" id="GBWNM">
+  <circle style="display:none" class="Royal Borough of Windsor and Maidenhead" cx="744.1" cy="836.2" id="GBWNM">
   </circle>
-  <circle class="Slough" cx="753.6" cy="839.1" id="GBSLG">
+  <circle style="display:none" class="Slough" cx="753.6" cy="839.1" id="GBSLG">
   </circle>
-  <circle class="Reading" cx="730.1" cy="840.8" id="GBRDG">
+  <circle style="display:none" class="Reading" cx="730.1" cy="840.8" id="GBRDG">
   </circle>
-  <circle class="Surrey" cx="758.1" cy="855.7" id="GBSRY">
+  <circle style="display:none" class="Surrey" cx="758.1" cy="855.7" id="GBSRY">
   </circle>
-  <circle class="Blackburn with Darwen" cx="664.2" cy="666.7" id="GBBBD">
+  <circle style="display:none" class="Blackburn with Darwen" cx="664.2" cy="666.7" id="GBBBD">
   </circle>
-  <circle class="Swindon" cx="697.3" cy="833.7" id="GBSWD">
+  <circle style="display:none" class="Swindon" cx="697.3" cy="833.7" id="GBSWD">
   </circle>
-  <circle class="Bath and North East Somerset" cx="664.2" cy="849" id="GBBAS">
+  <circle style="display:none" class="Bath and North East Somerset" cx="664.2" cy="849" id="GBBAS">
   </circle>
-  <circle class="Wiltshire" cx="687.8" cy="854.6" id="GBWIL">
+  <circle style="display:none" class="Wiltshire" cx="687.8" cy="854.6" id="GBWIL">
   </circle>
-  <circle class="Calderdale" cx="686.7" cy="663.6" id="GBCLD">
+  <circle style="display:none" class="Calderdale" cx="686.7" cy="663.6" id="GBCLD">
   </circle>
-  <circle class="Kirklees" cx="696.6" cy="673.8" id="GBKIR">
+  <circle style="display:none" class="Kirklees" cx="696.6" cy="673.8" id="GBKIR">
   </circle>
-  <circle class="Nottingham" cx="724.3" cy="727" id="GBNGM">
+  <circle style="display:none" class="Nottingham" cx="724.3" cy="727" id="GBNGM">
   </circle>
-  <circle class="Leicester" cx="726.3" cy="752.2" id="GBLCE">
+  <circle style="display:none" class="Leicester" cx="726.3" cy="752.2" id="GBLCE">
   </circle>
-  <circle class="Derby" cx="710.4" cy="730.7" id="GBDER">
+  <circle style="display:none" class="Derby" cx="710.4" cy="730.7" id="GBDER">
   </circle>
-  <circle class="Leeds" cx="709.9" cy="658.6" id="GBLDS">
+  <circle style="display:none" class="Leeds" cx="709.9" cy="658.6" id="GBLDS">
   </circle>
-  <circle class="Bradford" cx="694.4" cy="654.3" id="GBBRD">
+  <circle style="display:none" class="Bradford" cx="694.4" cy="654.3" id="GBBRD">
   </circle>
-  <circle class="Wakefield" cx="713" cy="671.5" id="GBWKF">
+  <circle style="display:none" class="Wakefield" cx="713" cy="671.5" id="GBWKF">
   </circle>
-  <circle class="Barnsley" cx="708.7" cy="680.5" id="GBBNS">
+  <circle style="display:none" class="Barnsley" cx="708.7" cy="680.5" id="GBBNS">
   </circle>
-  <circle class="Salford" cx="666.2" cy="683.1" id="GBSLF">
+  <circle style="display:none" class="Salford" cx="666.2" cy="683.1" id="GBSLF">
   </circle>
-  <circle class="Bolton" cx="665.7" cy="675.5" id="GBBOL">
+  <circle style="display:none" class="Bolton" cx="665.7" cy="675.5" id="GBBOL">
   </circle>
-  <circle class="Trafford" cx="668" cy="689.9" id="GBTRF">
+  <circle style="display:none" class="Trafford" cx="668" cy="689.9" id="GBTRF">
   </circle>
-  <circle class="Manchester" cx="673.2" cy="686.6" id="GBMAN">
+  <circle style="display:none" class="Manchester" cx="673.2" cy="686.6" id="GBMAN">
   </circle>
-  <circle class="Oldham" cx="684.1" cy="679.2" id="GBOLD">
+  <circle style="display:none" class="Oldham" cx="684.1" cy="679.2" id="GBOLD">
   </circle>
-  <circle class="Rochdale" cx="677.3" cy="673.2" id="GBRCH">
+  <circle style="display:none" class="Rochdale" cx="677.3" cy="673.2" id="GBRCH">
   </circle>
-  <circle class="Tameside" cx="680.9" cy="686.2" id="GBTAM">
+  <circle style="display:none" class="Tameside" cx="680.9" cy="686.2" id="GBTAM">
   </circle>
-  <circle class="Bury" cx="671" cy="675.7" id="GBBUR">
+  <circle style="display:none" class="Bury" cx="671" cy="675.7" id="GBBUR">
   </circle>
-  <circle class="Solihull" cx="698.5" cy="768" id="GBSOL">
+  <circle style="display:none" class="Solihull" cx="698.5" cy="768" id="GBSOL">
   </circle>
-  <circle class="Coventry" cx="707.3" cy="768.6" id="GBCOV">
+  <circle style="display:none" class="Coventry" cx="707.3" cy="768.6" id="GBCOV">
   </circle>
-  <circle class="Birmingham" cx="691.7" cy="763.2" id="GBBIR">
+  <circle style="display:none" class="Birmingham" cx="691.7" cy="763.2" id="GBBIR">
   </circle>
-  <circle class="Sandwell" cx="685.3" cy="759.5" id="GBSAW">
+  <circle style="display:none" class="Sandwell" cx="685.3" cy="759.5" id="GBSAW">
   </circle>
-  <circle class="Dudley" cx="680" cy="763.6" id="GBDUD">
+  <circle style="display:none" class="Dudley" cx="680" cy="763.6" id="GBDUD">
   </circle>
-  <circle class="Walsall" cx="687.7" cy="753.1" id="GBWLL">
+  <circle style="display:none" class="Walsall" cx="687.7" cy="753.1" id="GBWLL">
   </circle>
-  <circle class="Wolverhampton" cx="680.2" cy="753.4" id="GBWLV">
+  <circle style="display:none" class="Wolverhampton" cx="680.2" cy="753.4" id="GBWLV">
   </circle>
  </g>
 <!-- Region Labels -->
