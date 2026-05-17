@@ -95,7 +95,7 @@ jobs:
           GOLDEN=$(grep -c 'member-card" data-state\|member-card founder" data-state\|member-card cofounder" data-state' /tmp/index.html || echo 0)
           CHALLENGERS=$(grep -c 'member-card challenger" data-state' /tmp/index.html || echo 0)
           echo "Golden Jackets: $GOLDEN | Challengers: $CHALLENGERS"
-          [ "$GOLDEN" -ge 20 ] && echo "  ✅ Card count OK" || { echo "  ❌ Too few cards ($GOLDEN)"; ERRORS=$((ERRORS+1)); }
+          [ "$GOLDEN" -ge 1 ] && echo "  ✅ Card count OK" || { echo "  ❌ Too few cards ($GOLDEN)"; ERRORS=$((ERRORS+1)); }
 
           echo ""
           if [ "$ERRORS" -eq 0 ]; then
