@@ -46,7 +46,7 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync . s3://www.goldenjacketsbrazil.com/ \
+          aws s3 sync . s3://goldenjackets.co.uk/ \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude ".gitignore" \
@@ -80,15 +80,15 @@ jobs:
           echo "🔍 Smoke Test Starting..."
           ERRORS=0
 
-          HTTP=$(curl -s -o /tmp/index.html -w "%{http_code}" https://goldenjacketsbrazil.com)
+          HTTP=$(curl -s -o /tmp/index.html -w "%{http_code}" https://d245cwyl4dcv9y.cloudfront.net)
           echo "Main site: HTTP $HTTP"
           [ "$HTTP" = "200" ] && echo "  ✅ OK" || { echo "  ❌ FAIL"; ERRORS=$((ERRORS+1)); }
 
-          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://goldenjacketsbrazil.com/members.html)
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://d245cwyl4dcv9y.cloudfront.net/members.html)
           echo "Lounge: HTTP $HTTP"
           [ "$HTTP" = "200" ] && echo "  ✅ OK" || { echo "  ❌ FAIL"; ERRORS=$((ERRORS+1)); }
 
-          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://goldenjacketsbrazil.com/admin.html)
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://d245cwyl4dcv9y.cloudfront.net/admin.html)
           echo "Admin: HTTP $HTTP"
           [ "$HTTP" = "200" ] && echo "  ✅ OK" || { echo "  ❌ FAIL"; ERRORS=$((ERRORS+1)); }
 
