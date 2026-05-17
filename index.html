@@ -360,7 +360,7 @@
       </div>
     </div>
     <div class="links">
-      <button class="lang-toggle" onclick="toggleLang()" title="Toggle language"><img src="https://flagcdn.com/w40/pl.png" width="20" height="14" alt="PL" class="flag-img"></button>
+      
       <a href="#members">Members</a>
       <a href="#alumni">Alumni</a>
       <a href="#challengers">Challengers</a>
@@ -373,7 +373,7 @@
     <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open');this.textContent=this.textContent==='☰'?'✕':'☰'" aria-label="Menu">☰</button>
   </nav>
   <div class="mobile-menu">
-    <button class="lang-toggle" onclick="toggleLang()" title="Toggle language"><img src="https://flagcdn.com/w40/pl.png" width="20" height="14" alt="PL" class="flag-img"></button>
+    
     <a href="#members" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Members</a>
     <a href="#alumni" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Alumni</a>
     <a href="#challengers" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Challengers</a>
@@ -1126,97 +1126,7 @@ function chatAnswer(key) {
 }
 
 var currentLang = localStorage.getItem('lang') || 'en';
-var translations = {
-  'Welcome to ': 'Witamy w ',
-  'Already a Golden Jacket holder from United Kingdom?': 'Masz już Golden Jacket z Polski?',
-  'Get in touch': 'Skontaktuj się',
-  'About Us': 'O nas',
-  'We are the Golden Jackets from United Kingdom — a select group of professionals recognized by Amazon Web Services with the highest distinction in the AWS community worldwide. The Golden Jacket is awarded to those who have earned all active AWS certifications and demonstrated exceptional contribution through technical leadership, content creation, community building, and innovation. Our mission is to share knowledge, inspire the next generation of cloud leaders, and strengthen United Kingdom\'s presence on the global AWS stage.':
-    'Jesteśmy Golden Jackets z Polski — elitarna grupa profesjonalistów wyróżnionych przez Amazon Web Services najwyższym odznaczeniem w społeczności AWS na świecie. Golden Jacket przyznawany jest tym, którzy zdobyli wszystkie aktywne certyfikaty AWS i wykazali się wyjątkowym wkładem poprzez przywództwo techniczne, tworzenie treści, budowanie społeczności i innowacje. Naszą misją jest dzielenie się wiedzą, inspirowanie następnego pokolenia liderów chmury i wzmacnianie obecności Polski na globalnej scenie AWS.',
-  'The Golden Jackets UK community celebrates cloud leaders who are passionate about learning and committed to helping others succeed. Our members have achieved all active AWS certifications and actively support others on their cloud journey.':
-    'Społeczność Golden Jackets UK celebruje liderów chmury, którzy są pasjonatami nauki i pomagają innym osiągnąć sukces. Nasi członkowie zdobyli wszystkie aktywne certyfikaty AWS i aktywnie wspierają innych w ich drodze do chmury.',
-  'Members': 'Członkowie',
-  'Where we are': 'Gdzie jesteśmy',
-  'Golden Jackets across United Kingdom': 'Golden Jackets w UK',
-  'Every Golden Jacket holds all active AWS Certifications': 'Każdy Golden Jacket posiada wszystkie aktywne certyfikaty AWS',
-  '12 certifications · 4 levels · Complete mastery': '12 certyfikatów · 4 poziomy · Pełne opanowanie',
-  'Filter by State:': 'Filtruj wg województwa:',
-  'Events': 'Wydarzenia',
-  'Stay tuned for upcoming community events, meetups, and workshops.': 'Bądź na bieżąco z nadchodzącymi wydarzeniami, meetupami i warsztatami społeczności.',
-  'Coming Soon': 'Wkrótce',
-  'We\'re planning something special. Follow us on LinkedIn to be the first to know!': 'Planujemy coś specjalnego. Śledź nas na LinkedIn, aby być pierwszym, który się dowie!',
-  'Join the journey': 'Dołącz do podróży',
-  'Follow us for insights, events, and stories from the British Golden Jacket community.': 'Śledź nas, aby poznać spostrzeżenia, wydarzenia i historie ze społeczności Golden Jacket w UK.',
-  'Follow on LinkedIn': 'Śledź na LinkedIn',
-  'Our Soundtrack': 'Nasza ścieżka dźwiękowa',
-  'What Golden Jackets listen to while conquering certifications. 🎸': 'Co słuchają Golden Jackets podczas zdobywania certyfikatów. 🎸',
-  'Founder': 'Założyciel',
-  'Co-Founder': 'Współzałożyciel',
-  'Member': 'Członek',
-  'Certified on': 'Certyfikat od',
-  'What the Golden Jacket Creator Says': 'Co mówi Twórca Golden Jacket',
-  'A message for the Golden Jackets UK Community': 'Wiadomość dla społeczności Golden Jackets UK',
-  'Creator of the Golden Jacket · Managing Director, AWS': 'Twórca Golden Jacket · Managing Director, AWS',
-  'Official Partners': 'Oficjalni Partnerzy',
-  '🤝 Official Partners': '🤝 Oficjalni Partnerzy',
-  'AWS Certification Prep · Practice Exams': 'Przygotowanie do certyfikacji AWS · Egzaminy próbne',
-  'AI & ML Courses · Video Courses': 'Kursy AI & ML · Kursy wideo',
-  'Founded': 'Założono',
-  'States': 'Województwa',
-  'Certifications': 'Certyfikaty',
-  'Upcoming Events': 'Nadchodzące wydarzenia',
-  'Where you\'ll find Golden Jackets UK 🇬🇧': 'Gdzie znajdziesz Golden Jackets UK 🇬🇧',
-  'Path to the Golden Jacket': 'Droga do Golden Jacket',
-  'Everything you need to know about earning the highest AWS recognition': 'Wszystko, co musisz wiedzieć o zdobyciu najwyższego wyróżnienia AWS',
-  'Articles & Talks': 'Artykuły i Prezentacje',
-  'Technical content and talks from our Golden Jacket members': 'Treści techniczne i prezentacje naszych członków Golden Jacket',
-  'Podcast & Videos': 'Podcast i Filmy',
-  'Watch our episodes on YouTube or listen on Spotify': 'Oglądaj nasze odcinki na YouTube lub słuchaj na Spotify',
-  'Episodes coming soon!': 'Odcinki wkrótce!',
-  'Our first episodes are being recorded. Subscribe to our YouTube channel to get notified!': 'Nasze pierwsze odcinki są nagrywane. Subskrybuj nasz kanał YouTube, aby otrzymać powiadomienie!',
-  'Sponsors & Partners': 'Sponsorzy i Partnerzy',
-  'Companies and educators who support our community': 'Firmy i edukatorzy wspierający naszą społeczność',
-  'Interested in supporting Golden Jackets UK?': 'Chcesz wesprzeć Golden Jackets UK?',
-  'We\'re looking for partners who share our mission of empowering cloud professionals in United Kingdom. Sponsor the community and connect with the most certified AWS professionals in the country.': 'Szukamy partnerów, którzy podzielają naszą misję wspierania profesjonalistów chmury w UK. Sponsoruj społeczność i nawiąż kontakt z najbardziej certyfikowanymi specjalistami AWS w kraju.',
-  'Send Interest →': 'Wyślij zainteresowanie →',
-  'Your name': 'Twoje imię',
-  'Company': 'Firma',
-  'Frequently Asked Questions': 'Najczęściej zadawane pytania',
-  'What is the Golden Jacket?': 'Czym jest Golden Jacket?',
-  'The Golden Jacket is the highest recognition in the AWS certification ecosystem — awarded to professionals who earn all 12 active AWS certifications. It was created by Geries AbouAyash, Managing Director at AWS.': 'Golden Jacket to najwyższe wyróżnienie w ekosystemie certyfikacji AWS — przyznawane profesjonalistom, którzy zdobyli wszystkie 12 aktywnych certyfikatów AWS. Został stworzony przez Geriesa AbouAyasha, Managing Director w AWS.',
-  'How many certifications do I need?': 'Ile certyfikatów potrzebuję?',
-  'All 12 active AWS certifications must be current and valid: 2 Foundational, 5 Associate, 2 Professional, and 3 Specialty level.': 'Wszystkie 12 aktywnych certyfikatów AWS musi być aktualne: 2 Foundational, 5 Associate, 2 Professional i 3 Specialty.',
-  'How long does it take?': 'Ile to zajmuje czasu?',
-  'It varies — some achieve it in 1-2 years of focused study, others take longer. The key is consistency and dedication.': 'To zależy — niektórzy osiągają to w 1-2 lata intensywnej nauki, inni potrzebują więcej czasu. Kluczem jest konsekwencja i determinacja.',
-  'How rare is it?': 'Jak rzadkie to jest?',
-  'Extremely rare. Less than 0.01% of AWS certified professionals worldwide hold all active certifications. In United Kingdom, there are 10+ known Golden Jacket holders.': 'Niezwykle rzadkie. Mniej niż 0,01% certyfikowanych specjalistów AWS na świecie posiada wszystkie aktywne certyfikaty. W UK jest 10+ znanych posiadaczy Golden Jacket.',
-  'Certifications Required': 'Wymagane certyfikaty',
-  'Difficulty Levels': 'Poziomy trudności',
-  'Of AWS Certified Pros': 'Certyfikowanych specjalistów AWS',
-  'Known in United Kingdom 🇬🇧': 'Znanych w UK 🇬🇧',
-  'This is an independent community, not officially affiliated with Amazon Web Services.': 'To niezależna społeczność, nie jest oficjalnie powiązana z Amazon Web Services.',
-  'Professionals who earned all 12 AWS certifications': 'Profesjonaliści, którzy zdobyli wszystkie 12 certyfikatów AWS',
-  'Alumni': 'Alumni',
-  'Former Golden Jacket holders — renew your expired certifications to reclaim your Golden Jacket status': 'Byli posiadacze Golden Jacket — odnów wygasłe certyfikaty, aby odzyskać status Golden Jacket',
-  'Challengers': 'Challengers',
-  'Professionals with 10 or more AWS certifications — on the final stretch to the Golden Jacket': 'Profesjonaliści z 10 lub więcej certyfikatami AWS — na ostatniej prostej do Golden Jacket',
-  'Complete your final certification to earn your Golden Jacket and unlock the Members Lounge 🏆': 'Zdobądź ostatni certyfikat, aby otrzymać Golden Jacket i odblokować Members Lounge 🏆',
-  'Privacy Policy': 'Polityka prywatności',
-  'Independent community, not officially affiliated with Amazon Web Services.': 'Niezależna społeczność, nie jest oficjalnie powiązana z Amazon Web Services.',
-  'I\'m a Golden Jacket 🏆': 'Jestem Golden Jacket 🏆',
-  'Learn more →': 'Dowiedz się więcej →',
-  'Follow us →': 'Śledź nas →',
-  'to join the community and be featured on this page.': 'aby dołączyć do społeczności i pojawić się na tej stronie.',
-  'Official Partners': 'Oficjalni Partnerzy',
-  '* Some members hold the ML Specialty (retired Apr 2026), while others hold the Generative AI Professional — both are recognized paths to the Golden Jacket.': '* Niektórzy członkowie posiadają ML Specialty (wycofany w kwi 2026), inni Generative AI Professional — obie ścieżki są uznawane.',
-  'Follow us on LinkedIn for updates!': 'Śledź nas na LinkedIn po aktualności!',
-  'Join Us': 'Dołącz',
-  'visits': 'odwiedzin',
-  'unique visitors': 'unikalnych odwiedzających',
-  'Independent community, not officially affiliated with Amazon Web Services.': 'Niezależna społeczność, nie jest oficjalnie powiązana z Amazon Web Services.'
-};
 
-function toggleLang() {
   currentLang = currentLang === 'en' ? 'pl' : 'en';
   localStorage.setItem('lang', currentLang);
   applyLang();
