@@ -1198,7 +1198,7 @@ setInterval(updateCountdowns, 1000);
   var gjNames = [];
   document.querySelectorAll('#members .member-card h3').forEach(function(h){ gjNames.push(h.textContent); });
   var last3 = gjNames.slice(-3);
-  var wt = (currentLang === 'pl') ? '🆕 Witamy ' : '🆕 Welcome ';
+  var wt = '🆕 Welcome ';
   if(last3.length===3) wt += last3[0]+', '+last3[1]+' & '+last3[2]+'!';
   else if(last3.length===2) wt += last3[0]+' & '+last3[1]+'!';
   else if(last3.length===1) wt += last3[0]+'!';
