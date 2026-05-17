@@ -136,7 +136,7 @@
       text-align: center; padding: 70px 20px 50px;
       background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
     }
-    .hero-logo { width: 140px; height: auto; border-radius: 16px; margin-bottom: 28px; animation: pulse 3s ease-in-out infinite; background: #000; padding: 10px; }
+    .hero-logo { width: 140px; height: 140px; border-radius: 16px; margin-bottom: 28px; animation: pulse 3s ease-in-out infinite; background: #000; padding: 10px; object-fit: contain; }
     @keyframes pulse { 0%,100%{ transform:scale(1); filter:drop-shadow(0 0 15px rgba(255,215,0,0.3)); } 50%{ transform:scale(1.12); filter:drop-shadow(0 0 40px rgba(255,215,0,0.7)); } }
     .hero h1 { font-size: 2.6em; font-weight: 800; margin-bottom: 16px; }
     .hero h1 .gold { color: var(--gold); }
@@ -889,7 +889,7 @@
       <label>Photo</label>
       <input type="file" id="applyPhoto" accept="image/*">
       <div style="margin:12px 0;display:flex;align-items:flex-start;gap:8px;">
-        <input type="checkbox" id="applyConsent" style="margin-top:4px;width:auto;">
+        <input type="checkbox" id="applyConsent" style="margin-top:-6px;width:auto;">
         <label for="applyConsent" style="font-size:0.8em;color:#999;cursor:pointer;">Li e concordo com a <a href="/privacy.html" target="_blank" style="color:#FFD700;">Privacy Policy</a>. Autorizo a exibição do meu nome, foto e cidade no site da comunidade.</label>
       </div>
       <button onclick="submitApplication()">Submit Application</button>
@@ -1040,7 +1040,7 @@
     <button class="chat-opt" onclick="chatAnswer('contact')">Contact us</button>
   </div>
 </div>
-<button class="join-btn" onclick="document.getElementById('applyForm').classList.add('open');document.querySelector('.cta').scrollIntoView({behavior:'smooth'})" title="Join Golden Jackets UK"><img src="assets/jacket-uk.png" width="80" style="height:auto;" alt="Join"><span style="display:block;font-size:0.9em;color:#FFD700;font-weight:700;margin-top:4px;">Join Us</span></button>
+<button class="join-btn" onclick="document.getElementById('applyForm').classList.add('open');document.querySelector('.cta').scrollIntoView({behavior:'smooth'})" title="Join Golden Jackets UK"><img src="assets/jacket-uk.png" width="80" style="height:auto;" alt="Join"><span style="display:block;font-size:0.9em;color:#FFD700;font-weight:700;margin-top:-6px;">Join Us</span></button>
 <a href="https://tutorialsdojo.com" target="_blank" rel="noopener noreferrer" class="partner-float" title="Official Partner — Tutorials Dojo" style="position:fixed;top:95px;right:55px;z-index:999;background:none;border:none;cursor:pointer;filter:drop-shadow(0 0 15px rgba(255,215,0,0.4));transition:all 0.3s;animation:float 3s ease-in-out infinite;animation-delay:1.5s;text-align:center;text-decoration:none;"><img src="assets/tutorialsdojo-logo.png" width="100" alt="Tutorials Dojo" style="border-radius:8px;"><span style="display:block;font-size:0.7em;color:#FFD700;font-weight:700;margin-top:2px;" class="partner-label">Partner</span></a>
 <a href="https://sundog-education.com" target="_blank" rel="noopener noreferrer" class="partner-float" title="Official Partner — Sundog Education" style="position:fixed;top:195px;right:55px;z-index:999;background:none;border:none;cursor:pointer;filter:drop-shadow(0 0 15px rgba(255,215,0,0.4));transition:all 0.3s;animation:float 3s ease-in-out infinite;animation-delay:2.5s;text-align:center;text-decoration:none;"><img src="assets/partners/sundogeducation.png" width="90" alt="Sundog Education" style="border-radius:8px;"><span style="display:block;font-size:0.7em;color:#FFD700;font-weight:700;margin-top:2px;" class="partner-label">Partner</span></a>
 <button class="chat-btn" onclick="toggleChat()" title="Chat with us"><svg width="24" height="24" viewBox="0 0 24 24" fill="#151528"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg></button>
