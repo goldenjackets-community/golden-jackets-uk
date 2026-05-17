@@ -958,7 +958,7 @@
 <text x="775" y="840" fill="#FFD700" font-size="12" text-anchor="middle" font-weight="700" font-family="Arial">LDN</text>
 <text x="750" y="875" fill="#888" font-size="13" text-anchor="middle" font-weight="700" font-family="Arial">SE</text>
 <text x="620" y="895" fill="#888" font-size="13" text-anchor="middle" font-weight="700" font-family="Arial">SW</text>
-<!-- Golden Jacket Pin
+<!-- Golden Jacket Pin -->
 <circle cx="660" cy="690" r="10" fill="#FFD700" opacity="0.9" stroke="#151528" stroke-width="2"/>
 <text x="660" y="695" fill="#151528" font-size="11" text-anchor="middle" font-weight="700" font-family="Arial">1</text>
 </svg>
