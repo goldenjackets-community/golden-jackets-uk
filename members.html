@@ -676,7 +676,7 @@ async function loadJobs() {
     var myEmail = sessionStorage.getItem('gj_email') || '';
     if (!data.jobs || data.jobs.length === 0) { list.innerHTML = '<p style="color:#666;">No jobs posted yet. Be the first!</p>'; return; }
     list.innerHTML = data.jobs.map(j => {
-      var isOwner = (j.posted_by === myEmail) || (myEmail === 'ricardo.gulias@darede.com.br');
+      var isOwner = (j.posted_by === myEmail) || (myEmail === 'ricardo.gulias@goldenjacketsbrazil.com');
       var actions = isOwner ? ` · <a href="#" onclick="removeJob('${j.id}');return false;" style="color:#ef4444;font-size:0.8em;">🗑️ Remove</a>` : '';
       var applyBtn = !isOwner ? ` · <a href="#" onclick="applyJob('${j.id}');return false;" style="color:#3ecf8e;font-weight:700;">🙋 I'm Interested</a>` : '';
       var externalLink = j.link ? ` · <a href="${j.link}" target="_blank" style="color:#888;font-size:0.8em;">🔗 External Link</a>` : '';
