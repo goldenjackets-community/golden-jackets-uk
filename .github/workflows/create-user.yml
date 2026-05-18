@@ -65,7 +65,7 @@ jobs:
           
           cat > /tmp/welcome.json << EMAILEOF
           {
-            "Source": "ricardo.gulias@darede.com.br",
+            "Source": "ricardo.gulias@goldenjacketsbrazil.com",
             "Destination": {"ToAddresses": ["$EMAIL"]},
             "Message": {
               "Subject": {"Data": "Welcome to Golden Jackets Brazil!", "Charset": "UTF-8"},
