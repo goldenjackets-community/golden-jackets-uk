@@ -97,12 +97,12 @@
         <div class="label">Restore</div>
         <div class="desc">Restore site from latest backup</div>
       </div>
-      <a class="tool-btn" href="https://github.com/goldenjackets-community/golden-jackets-uk/pulls" target="_blank">
+      <a class="tool-btn global-only" style="display:none;" href="https://github.com/goldenjackets-community/golden-jackets-uk/pulls" target="_blank">
         <div class="icon">🔀</div>
         <div class="label">Open PRs</div>
         <div class="desc">Review pending pull requests</div>
       </a>
-      <a class="tool-btn" href="https://github.com/goldenjackets-community/golden-jackets-uk/actions" target="_blank">
+      <a class="tool-btn global-only" style="display:none;" href="https://github.com/goldenjackets-community/golden-jackets-uk/actions" target="_blank">
         <div class="icon">🚀</div>
         <div class="label">Deployments</div>
         <div class="desc">GitHub Actions status</div>
@@ -449,6 +449,7 @@ function filterPartnerStats(){
 }
 // Global admin: show All Chapters button
 var GLOBAL_ADMINS = ['ricardo.gulias@goldenjacketsbrazil.com'];
+if(GLOBAL_ADMINS.includes(email)){document.querySelectorAll(".global-only").forEach(function(el){el.style.display="block"});}
 if (GLOBAL_ADMINS.includes(email)) { var btn = document.getElementById('btnAllChapters'); if(btn) btn.style.display=''; }
 
 async function listAllUsers() {
