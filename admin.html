@@ -474,7 +474,7 @@ async function listPRs(type) {
   var data = await adminCall('list-prs');
   if (!data || !data.prs) return;
   var prs = data.prs.filter(function(p){ return p.type === type; });
-  var out = document.getElementById('output');
+  var out = document.getElementById('adminOutput');
   if (prs.length === 0) {
     out.innerHTML = '<span style="color:#4CAF50;">✅ No pending ' + (type==='member'?'applications':'articles') + '!</span>';
     return;
@@ -493,7 +493,7 @@ async function mergePR(number) {
   if (!confirm('Are you sure you want to approve PR #' + number + '?')) return;
   var data = await adminCall('merge-pr', {pr_number: number});
   if (data && data.message) {
-    document.getElementById('output').innerHTML = '<span style="color:#4CAF50;">✅ ' + data.message + '</span><br><span style="color:#888;">Site will update in ~1 minute.</span>';
+    document.getElementById('adminOutput').innerHTML = '<span style="color:#4CAF50;">✅ ' + data.message + '</span><br><span style="color:#888;">Site will update in ~1 minute.</span>';
   }
 }
 </script>
