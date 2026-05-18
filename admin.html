@@ -74,6 +74,16 @@
         <div class="label">Delete User</div>
         <div class="desc">Remove user from Cognito</div>
       </div>
+      <div class="tool-btn" onclick="listPRs('member')" style="border:1px solid #4CAF50;">
+        <div class="icon">📋</div>
+        <div class="label">Pending Applications</div>
+        <div class="desc">Review and approve new members</div>
+      </div>
+      <div class="tool-btn" onclick="listPRs('article')" style="border:1px solid #2196F3;">
+        <div class="icon">📝</div>
+        <div class="label">Pending Articles</div>
+        <div class="desc">Review and publish articles</div>
+      </div>
       <div class="tool-btn green" onclick="backupStatus()">
         <div class="icon">💾</div>
         <div class="label">Backup Status</div>
@@ -459,3 +469,31 @@ async function listAllUsers() {
 </script>
 </body>
 </html>
+<script>
+async function listPRs(type) {
+  var data = await adminCall('list-prs');
+  if (!data || !data.prs) return;
+  var prs = data.prs.filter(function(p){ return p.type === type; });
+  var out = document.getElementById('output');
+  if (prs.length === 0) {
+    out.innerHTML = '<span style="color:#4CAF50;">✅ No pending ' + (type==='member'?'applications':'articles') + '!</span>';
+    return;
+  }
+  var h = '<strong style="color:#FFD700;">' + (type==='member'?'📋 Pending Applications':'📝 Pending Articles') + ' (' + prs.length + ')</strong><br><br>';
+  prs.forEach(function(pr){
+    h += '<div style="background:#1a1a30;padding:12px;border-radius:8px;margin-bottom:8px;border:1px solid #2a2a45;">';
+    h += '<strong style="color:#fff;">' + pr.title + '</strong><br>';
+    h += '<span style="color:#888;font-size:0.8em;">By ' + pr.author + ' · ' + pr.created_at.split('T')[0] + '</span><br>';
+    h += '<button onclick="mergePR(' + pr.number + ')" style="margin-top:8px;padding:6px 16px;background:#4CAF50;border:none;border-radius:4px;color:#fff;font-weight:700;cursor:pointer;">✅ Approve & ' + (type==='member'?'Add':'Publish') + '</button>';
+    h += '</div>';
+  });
+  out.innerHTML = h;
+}
+async function mergePR(number) {
+  if (!confirm('Are you sure you want to approve PR #' + number + '?')) return;
+  var data = await adminCall('merge-pr', {pr_number: number});
+  if (data && data.message) {
+    document.getElementById('output').innerHTML = '<span style="color:#4CAF50;">✅ ' + data.message + '</span><br><span style="color:#888;">Site will update in ~1 minute.</span>';
+  }
+}
+</script>
