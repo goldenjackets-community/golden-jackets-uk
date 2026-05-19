@@ -459,7 +459,7 @@ async function setupMfa() {
     var data = await resp.json();
     if (data.SecretCode) {
       var email = sessionStorage.getItem('gj_email');
-      var otpauth = 'otpauth://totp/GoldenJacketsBrazil:' + email + '?secret=' + data.SecretCode + '&issuer=GoldenJacketsBrazil';
+      var otpauth = 'otpauth://totp/GoldenJacketsUK:' + email + '?secret=' + data.SecretCode + '&issuer=GoldenJacketsUK';
       var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(otpauth);
       out.innerHTML = '<p style="color:var(--gold);margin-bottom:12px;">Scan this QR code with Google Authenticator:</p>' +
         '<img src="' + qrUrl + '" style="border-radius:8px;margin-bottom:12px;"><br>' +
