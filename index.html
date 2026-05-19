@@ -1239,7 +1239,7 @@ if (mapObj) mapObj.addEventListener('load', function() {
     var ids = regionMap[state] || [];
     ids.forEach(function(id) {
       var paths = svgDoc.querySelectorAll('[id="' + id + '"]');
-      paths.forEach(function(p) { p.style.fill = '#B8860B'; p.style.stroke = '#FFD700'; });
+      paths.forEach(function(p) { p.style.fill = '#B8860B'; p.style.stroke = '#B8860B'; });
     });
   });
 });
