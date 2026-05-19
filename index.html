@@ -159,7 +159,7 @@
     #uk-map .circle { display: none; }
     .map-pin { position: absolute; transform: translate(-50%,-100%); cursor: pointer; transition: transform 0.2s; text-align: center; }
     .map-pin:hover { transform: translate(-50%,-100%) scale(1.2); }
-    .map-pin .pin-icon { font-size: 1.6em; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+    .map-pin .pin-icon { font-size: 1em; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
     .map-pin .pin-count { display: block; font-size: 0.65em; color: var(--text); font-weight: 700; margin-top: -2px; }
     @keyframes pinPulse { 0%,100%{ box-shadow: 0 0 0 0 rgba(255,215,0,0.4); } 50%{ box-shadow: 0 0 0 8px rgba(255,215,0,0); } }
 
@@ -472,10 +472,10 @@
     <h2>Where we are</h2>
     <p class="tip">Golden Jackets across United Kingdom</p>
     <div class="map-container">
-      <object data="assets/uk-map-regions.svg" type="image/svg+xml" style="width:100%;max-width:900px;height:auto;margin-top:30px;">England Regions Map</object>
+      <object id="ukMapObj" data="assets/uk-map-regions.svg" type="image/svg+xml" style="width:100%;max-width:900px;height:auto;margin-top:30px;">England Regions Map</object>
     
-      <div class="map-pin" style="top:38%;left:37%" onclick="filterByState('NW')"><span class="pin-icon">📍</span><span class="pin-count"><span class="gold-count">0</span> 🏆 <span class="silver-count">0</span> ⚔️</span></div>
-      <div class="map-pin" style="top:72%;left:35%" onclick="filterByState('SW')"><span class="pin-icon">📍</span><span class="pin-count"><span class="gold-count">0</span> 🏆</span></div></div>
+      <div class="map-pin" style="top:38%;left:37%" onclick="filterByState('NW')"><span class="pin-icon" style="color:#FFD700;">📍</span><span class="pin-count"><span class="gold-count">0</span>🏆 <span class="silver-count">0</span>⚔️</span></div>
+      <div class="map-pin" style="top:72%;left:35%" onclick="filterByState('SW')"><span class="pin-icon" style="color:#FFD700;">📍</span><span class="pin-count"><span class="gold-count">0</span>🏆</span></div></div>
   </section>
 
 
@@ -1213,6 +1213,36 @@ setInterval(updateCountdowns, 1000);
     }
   });
 })();
+
+// Highlight active regions on SVG map
+var mapObj = document.getElementById('ukMapObj');
+if (mapObj) mapObj.addEventListener('load', function() {
+  var svgDoc = mapObj.contentDocument;
+  if (!svgDoc) return;
+  var regionMap = {
+    'NW': ['GBCHW','GBCHE','GBCMA','GBHAL','GBKWL','GBLCN','GBLIV','GBMCR','GBOLM','GBRCH','GBSAL','GBSFD','GBSKP','GBSTH','GBTMSD','GBWGN','GBWRL','GBWRT','GBBOL','GBBUR','GBBLK','GBBWD','GBCOP','GBFYL','GBHYN','GBLNC','GBPEN','GBPRY','GBRBL','GBROS','GBSGE','GBWLN'],
+    'SW': ['GBBAS','GBBNS','GBBPL','GBBRC','GBBST','GBCGN','GBCOR','GBDEV','GBDOR','GBGLS','GBNSO','GBPLY','GBPOL','GBSGC','GBSOM','GBSWA','GBTOR','GBWIL','GBSGL'],
+    'SE': ['GBBKM','GBHAM','GBIOW','GBKEN','GBMDW','GBMIL','GBOXY','GBPOR','GBRDG','GBSLG','GBSRY','GBESX','GBWSX','GBWOK','GBWIN','GBBNH','GBSOT'],
+    'GL': ['GBBDG','GBBEN','GBBEX','GBBRY','GBCMD','GBCRD','GBEAL','GBENF','GBGRW','GBHCK','GBHIL','GBHNS','GBHRW','GBHRY','GBHVR','GBIST','GBKEC','GBKIN','GBLAM','GBLEW','GBMRT','GBNWM','GBRDB','GBRIC','GBSDN','GBSTN','GBSWR','GBTOW','GBWFT','GBWND','GBWSM','GBCTY'],
+    'EE': ['GBBDF','GBCAM','GBCBF','GBESS','GBHRT','GBLUT','GBNFK','GBPTE','GBSFK','GBSOS','GBTHR'],
+    'EM': ['GBDBY','GBDER','GBLCE','GBLEC','GBLIN','GBNOT','GBNGM','GBNTH','GBRUT'],
+    'WM': ['GBBIR','GBCOV','GBDUD','GBHEF','GBSHR','GBSOL','GBSTF','GBSTE','GBTEL','GBWLV','GBWOR','GBWAR'],
+    'YH': ['GBBRD','GBCAL','GBDON','GBERY','GBKHL','GBKIR','GBLDA','GBNYK','GBNLN','GBNEL','GBRTH','GBSHF','GBWKF','GBYOR'],
+    'NE': ['GBDUR','GBDRL','GBGAT','GBHPL','GBMDB','GBNBL','GBNTY','GBRCC','GBSTK','GBSND','GBSTY'],
+    'NI': ['GBAND','GBARD','GBARM','GBBFS','GBCCG','GBCLR','GBCSR','GBDRY','GBFMO','GBLBC','GBLSB','GBMEA','GBMUL','GBNMD','GBNNM'],
+    'SC': ['GBABD','GBANS','GBANG','GBCLK','GBDGN','GBDND','GBEDH','GBELN','GBELG','GBFAL','GBFIF','GBGLG','GBHLD','GBINV','GBMLG','GBMRY','GBNAY','GBORK','GBPKN','GBREN','GBSAB','GBSCB','GBSHE','GBSLK','GBSTG','GBWDG','GBZET'],
+    'WA': ['GBBGW','GBBGE','GBCAY','GBCMN','GBCRF','GBCWL','GBDEN','GBFLN','GBGWN','GBMON','GBMTY','GBNPT','GBPEM','GBPOW','GBRCT','GBSWN','GBTOF','GBVGL','GBWRX']
+  };
+  var activeStates = new Set();
+  document.querySelectorAll('.member-card[data-state]').forEach(function(c){ activeStates.add(c.dataset.state); });
+  activeStates.forEach(function(state) {
+    var ids = regionMap[state] || [];
+    ids.forEach(function(id) {
+      var paths = svgDoc.querySelectorAll('[id="' + id + '"]');
+      paths.forEach(function(p) { p.style.fill = '#B8860B'; p.style.stroke = '#FFD700'; });
+    });
+  });
+});
 </script>
 <script>
 // Dynamic counters - auto-count cards, never hardcode again
