@@ -128,6 +128,11 @@
         <div class="label">Promote</div>
         <div class="desc">Challenger → Golden Jacket</div>
       </div>
+      <div class="tool-btn" onclick="moveMember()">
+        <div class="icon">🔄</div>
+        <div class="label">Move Member</div>
+        <div class="desc">Change category (Golden/Alumni/Challenger)</div>
+      </div>
       <div class="tool-btn" onclick="window.open('/assets/chapter-leader-guide.pdf')">
         <div class="icon">📖</div>
         <div class="label">Operations Guide</div>
@@ -404,6 +409,26 @@ async function promoteChallenger() {
   var out = document.getElementById('adminOutput');
   out.style.display = 'block';
   out.innerHTML = '<strong style="color:#FF9800;">⚠️ Reminder:</strong> To complete the promotion, manually move the member card in index.html from the Challengers section to Golden Jackets section, update the tags, and push to main.<br><br><strong style="color:#4CAF50;">Member ' + email + ' flagged for promotion.</strong>';
+}
+
+async function moveMember() {
+  var name = prompt('Enter the member name (exactly as shown on the site):');
+  if (!name) return;
+  var target = prompt('Move to which category?\n\n1 = Golden Jacket\n2 = Alumni\n3 = Challenger\n\nEnter 1, 2 or 3:');
+  if (!target || !['1','2','3'].includes(target)) { alert('Invalid option'); return; }
+  var categories = {'1':'golden','2':'alumni','3':'challenger'};
+  var labels = {'1':'Golden Jacket','2':'Alumni','3':'Challenger'};
+  var cat = categories[target];
+  if (!confirm('Move "' + name + '" to ' + labels[target] + '?')) return;
+  var out = document.getElementById('adminOutput');
+  out.style.display = 'block';
+  out.innerHTML = '<span style="color:#FFD700;">Moving member...</span>';
+  var data = await adminCall('move-member', {name: name, target: cat});
+  if (data && data.message) {
+    out.innerHTML = '<span style="color:#4CAF50;">✅ ' + data.message + '</span>';
+  } else if (data && data.error) {
+    out.innerHTML = '<span style="color:#f44336;">❌ ' + data.error + '</span>';
+  }
 }
 
 // Load partner click stats
