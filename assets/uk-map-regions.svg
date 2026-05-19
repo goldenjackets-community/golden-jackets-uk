@@ -635,5 +635,5 @@
 <text x="800" y="780" fill="#888" font-size="9" text-anchor="middle" font-weight="600">EE</text>
 <text x="785" y="838" fill="#FFD700" font-size="9" text-anchor="middle" font-weight="600">LDN</text>
 <text x="740" y="870" fill="#888" font-size="9" text-anchor="middle" font-weight="600">SE</text>
-<text x="630" y="880" fill="#888" font-size="9" text-anchor="middle" font-weight="600">SW</text>
+<text x="630" y="880" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">SW</text>
 </svg>
