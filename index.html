@@ -1111,6 +1111,9 @@ function toggleChat() {
 
 async function submitApplication() {
   var msg = document.getElementById('applyMsg');
+  var btn = document.querySelector('.apply-form button[onclick]') || document.querySelector('.apply-form .join-btn');
+  if (window._submitting) return;
+  window._submitting = true;
   msg.innerHTML = '<span style="color:var(--gold)">Submitting...</span>';
   msg.style.display = 'block';
   try {
