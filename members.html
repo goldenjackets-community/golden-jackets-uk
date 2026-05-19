@@ -87,6 +87,13 @@
     <p class="login-msg" id="mfaMsg"></p>
   </div>
 
+  <!-- MFA Setup (during login) -->
+  <div class="login-box" id="mfaSetupBox" style="display:none;">
+    <h2>🔐 Setup MFA</h2>
+    <p>Your account requires two-factor authentication. Scan the QR code below with Google Authenticator or any TOTP app, then enter the 6-digit code.</p>
+    <div id="mfaSetupLoginOutput" style="margin-top:12px;"></div>
+  </div>
+
   <!-- Forgot Password -->
   <div class="login-box" id="forgotBox" style="display:none;">
     <h2>🔑 Reset Password</h2>
@@ -294,6 +301,13 @@ async function signIn() {
       sessionStorage.setItem('gj_mfa_email', emailVal);
       document.getElementById('loginBox').style.display = 'none';
       document.getElementById('mfaBox').style.display = 'block';
+    } else if (data.ChallengeName === 'MFA_SETUP') {
+      // MFA not configured yet - guide user through setup
+      sessionStorage.setItem('gj_mfa_session', data.Session);
+      sessionStorage.setItem('gj_mfa_email', emailVal);
+      document.getElementById('loginBox').style.display = 'none';
+      document.getElementById('mfaSetupBox').style.display = 'block';
+      startMfaSetupLogin(data.Session, emailVal);
     } else {
       msg.innerHTML = '<span style="color:#f44336">❌ ' + (data.message || 'Invalid credentials') + '</span>';
     }
@@ -361,6 +375,74 @@ async function verifyMfa() {
     }
   } catch(e) {
     msg.innerHTML = '<span style="color:#f44336">❌ Error verifying. Try again.</span>';
+  }
+}
+
+async function startMfaSetupLogin(session, emailVal) {
+  var out = document.getElementById('mfaSetupLoginOutput');
+  out.innerHTML = '<span style="color:#FFD700">Generating QR code...</span>';
+  try {
+    var resp = await fetch('https://cognito-idp.' + REGION + '.amazonaws.com/', {
+      method: 'POST',
+      headers: {'Content-Type':'application/x-amz-json-1.1','X-Amz-Target':'AWSCognitoIdentityProviderService.AssociateSoftwareToken'},
+      body: JSON.stringify({Session: session})
+    });
+    var data = await resp.json();
+    if (data.SecretCode) {
+      sessionStorage.setItem('gj_mfa_session', data.Session);
+      var otpauth = 'otpauth://totp/GoldenJackets:' + emailVal + '?secret=' + data.SecretCode + '&issuer=GoldenJackets';
+      var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(otpauth);
+      out.innerHTML = '<img src="' + qrUrl + '" style="border-radius:8px;margin-bottom:12px;"><br>' +
+        '<input type="text" id="mfaSetupLoginCode" placeholder="000000" maxlength="6" style="text-align:center;font-size:1.5em;letter-spacing:8px;width:200px;padding:8px;background:#1a1a30;border:1px solid #2a2a45;border-radius:8px;color:#e0e0e0;" onkeydown="if(event.key===\'Enter\')confirmMfaSetupLogin()">' +
+        '<br><button onclick="confirmMfaSetupLogin()" style="margin-top:12px;padding:10px 24px;background:linear-gradient(135deg,#FFD700,#B8860B);border:none;border-radius:8px;color:#151528;font-weight:700;cursor:pointer;">Verify & Complete Setup</button>' +
+        '<p id="mfaSetupLoginMsg" style="margin-top:8px;font-size:0.85em;"></p>';
+    } else {
+      out.innerHTML = '<span style="color:#f44336">❌ Error: ' + (data.message || 'Try again') + '</span>';
+    }
+  } catch(e) {
+    out.innerHTML = '<span style="color:#f44336">❌ Error setting up MFA.</span>';
+  }
+}
+
+async function confirmMfaSetupLogin() {
+  var code = document.getElementById('mfaSetupLoginCode').value;
+  var session = sessionStorage.getItem('gj_mfa_session');
+  var emailVal = sessionStorage.getItem('gj_mfa_email');
+  var msg = document.getElementById('mfaSetupLoginMsg');
+  msg.innerHTML = '<span style="color:#FFD700">Verifying...</span>';
+  try {
+    // Verify the TOTP code
+    var resp = await fetch('https://cognito-idp.' + REGION + '.amazonaws.com/', {
+      method: 'POST',
+      headers: {'Content-Type':'application/x-amz-json-1.1','X-Amz-Target':'AWSCognitoIdentityProviderService.VerifySoftwareToken'},
+      body: JSON.stringify({Session: session, UserCode: code, FriendlyDeviceName: 'Authenticator'})
+    });
+    var data = await resp.json();
+    if (data.Status === 'SUCCESS') {
+      // Complete the MFA_SETUP challenge
+      var resp2 = await fetch('https://cognito-idp.' + REGION + '.amazonaws.com/', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-amz-json-1.1','X-Amz-Target':'AWSCognitoIdentityProviderService.RespondToAuthChallenge'},
+        body: JSON.stringify({ChallengeName:'MFA_SETUP',ClientId:CLIENT_ID,ChallengeResponses:{USERNAME:emailVal},Session:data.Session})
+      });
+      var data2 = await resp2.json();
+      if (data2.AuthenticationResult) {
+        sessionStorage.setItem('gj_token', data2.AuthenticationResult.IdToken);
+        sessionStorage.setItem('gj_access', data2.AuthenticationResult.AccessToken);
+        sessionStorage.setItem('gj_refresh', data2.AuthenticationResult.RefreshToken);
+        sessionStorage.setItem('gj_email', emailVal);
+        sessionStorage.removeItem('gj_mfa_session');
+        sessionStorage.removeItem('gj_mfa_email');
+        document.getElementById('mfaSetupBox').style.display = 'none';
+        showContent(emailVal);
+      } else {
+        msg.innerHTML = '<span style="color:#f44336">❌ ' + (data2.message || 'Error completing setup') + '</span>';
+      }
+    } else {
+      msg.innerHTML = '<span style="color:#f44336">❌ Invalid code. Try again.</span>';
+    }
+  } catch(e) {
+    msg.innerHTML = '<span style="color:#f44336">❌ Error. Try again.</span>';
   }
 }
 
