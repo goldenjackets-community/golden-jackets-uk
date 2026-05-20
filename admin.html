@@ -514,7 +514,7 @@ async function listPRs(type) {
       var urlMatch = pr.body.match(/\*\*URL:\*\*\s*(https?:\/\/[^\s\n]+)/);
       var summaryMatch = pr.body.match(/\*\*Summary:\*\*\s*([^\n]+)/);
       if (urlMatch) {
-        h += '<br><a href="' + urlMatch[1] + '" target="_blank" style="color:#2196F3;font-size:0.85em;text-decoration:none;">🔗 Read full article ↗</a>';
+        h += '<br><a href="' + urlMatch[1] + '" target="_blank" style="color:#2196F3;font-size:1.1em;text-decoration:none;font-weight:600;display:inline-block;margin-top:6px;">🔗 Read full article ↗</a>';
       }
       if (summaryMatch) {
         h += '<p style="color:#ccc;font-size:0.85em;margin:8px 0;padding:8px;background:#151528;border-radius:4px;border-left:3px solid #FFD700;">' + summaryMatch[1] + '</p>';
