@@ -8,20 +8,20 @@
   .controls { margin-bottom:30px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; max-width:600px; }
   .controls input, .controls select { padding:8px 12px; background:#1a1a30; border:1px solid #333; border-radius:6px; color:#fff; font-size:0.9em; }
   .controls input { width:200px; }
-  .card { width:500px; min-height:520px; border-radius:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:30px; }
+  .card { width:280px; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:28px 20px; }
   .card.golden { background:linear-gradient(135deg,#B8860B,#FFD700,#B8860B); }
   .card.alumni { background:linear-gradient(135deg,#8B6914,#C9A020,#8B6914); }
   .card.challenger { background:linear-gradient(135deg,#707080,#C0C0C0,#707080); }
-  .logo { position:absolute; top:20px; left:20px; font-size:1.2em; font-weight:800; }
+  .logo { position:absolute; top:20px; left:20px; font-size:0.9em; font-weight:800; }
   .card.golden .logo { color:#151528; }
   .card.alumni .logo { color:#151528; }
   .card.challenger .logo { color:#151528; }
   .badge { position:absolute; top:16px; right:20px; padding:4px 12px; border-radius:12px; font-size:0.7em; font-weight:700; background:rgba(0,0,0,0.3); color:#fff; }
-  .photo { width:180px; height:180px; border-radius:12px; object-fit:cover; margin-bottom:16px; margin-top:20px; border:3px solid rgba(0,0,0,0.3); }
-  .name { font-size:1.6em; font-weight:800; margin-bottom:4px; color:#151528; }
-  .location { color:rgba(0,0,0,0.6); font-size:0.85em; margin-bottom:6px; }
-  .role { font-size:0.85em; margin-bottom:12px; font-weight:700; color:#151528; }
-  .title { color:rgba(0,0,0,0.7); font-size:0.85em; margin-bottom:16px; }
+  .photo { width:90px; height:90px; border-radius:50%; object-fit:cover; margin-bottom:16px; margin-top:20px; border:3px solid rgba(0,0,0,0.3); }
+  .name { font-size:1.1em; font-weight:800; margin-bottom:4px; color:#151528; }
+  .location { color:rgba(0,0,0,0.6); font-size:0.75em; margin-bottom:6px; }
+  .role { font-size:0.75em; margin-bottom:12px; font-weight:700; color:#151528; }
+  .title { color:rgba(0,0,0,0.7); font-size:0.75em; margin-bottom:16px; }
   .tags { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; margin-bottom:16px; }
   .tag { background:rgba(0,0,0,0.2); color:#fff; padding:4px 12px; border-radius:10px; font-size:0.7em; font-weight:700; }
   .linkedin a { background:#0077B5; color:#fff; padding:4px 10px; border-radius:6px; text-decoration:none; font-size:0.7em; font-weight:700; }
@@ -29,7 +29,7 @@
 </head>
 <body>
 <h2 style="color:#FFD700;margin-bottom:5px;">🏆 GJ UK — Member Card Generator</h2>
-<p style="color:#888;margin-bottom:20px;font-size:0.85em;">Fill in the details and screenshot the card below</p>
+<p style="color:#888;margin-bottom:20px;font-size:0.75em;">Fill in the details and screenshot the card below</p>
 <div class="controls">
   <select id="category" onchange="update()">
     <option value="golden">🏆 Golden Jacket</option>
@@ -47,7 +47,7 @@
 <div class="card golden" id="card">
   <div class="logo">GJ <span>UK</span></div>
   <div class="badge" id="cardBadge">🏆 Golden Jacket</div>
-  <img class="photo" id="cardPhoto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect fill='%231a1a30' width='180' height='180'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' fill='%23666' font-size='14'%3EPhoto%3C/text%3E%3C/svg%3E">
+  <img class="photo" id="cardPhoto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Crect fill='%231a1a30' width='90' height='90'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' fill='%23666' font-size='14'%3EPhoto%3C/text%3E%3C/svg%3E">
   <div class="name" id="cardName">Member Name</div>
   <div class="location" id="cardLoc">City, Region, UK</div>
   <div class="role" id="cardRole">🏆 Golden Jacket Member</div>
