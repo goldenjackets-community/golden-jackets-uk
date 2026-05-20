@@ -8,35 +8,22 @@
   .controls { margin-bottom:30px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; max-width:600px; }
   .controls input, .controls select { padding:8px 12px; background:#1a1a30; border:1px solid #333; border-radius:6px; color:#fff; font-size:0.9em; }
   .controls input { width:200px; }
-  .card { width:500px; height:520px; border-radius:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; border:2px solid transparent; transition:all 0.3s; }
-  .card.golden { background:linear-gradient(135deg,#151528 0%,#1a1a2a 50%,#151528 100%); border-color:#B8860B; box-shadow:0 0 30px rgba(255,215,0,0.15); }
-  .card.alumni { background:linear-gradient(135deg,#1a1815 0%,#1f1c18 50%,#1a1815 100%); border-color:#C9A020; box-shadow:0 0 30px rgba(210,175,48,0.15); }
-  .card.challenger { background:linear-gradient(135deg,#181820 0%,#1e1e28 50%,#181820 100%); border-color:#A8A8A8; box-shadow:0 0 30px rgba(200,200,220,0.12); }
-  .card-inner { display:flex; flex-direction:column; align-items:center; padding:30px; }
-  .logo { position:absolute; top:20px; left:20px; font-size:1.2em; font-weight:800; color:#fff; }
-  .logo span { color:var(--accent); }
-  .badge { position:absolute; top:16px; right:20px; padding:4px 12px; border-radius:12px; font-size:0.7em; font-weight:600; }
-  .badge.golden { background:rgba(255,215,0,0.15); border:1px solid rgba(255,215,0,0.3); color:#FFD700; }
-  .badge.alumni { background:rgba(210,175,48,0.15); border:1px solid rgba(210,175,48,0.3); color:#E6BE3A; }
-  .badge.challenger { background:rgba(200,200,220,0.15); border:1px solid rgba(200,200,220,0.3); color:#D0D0D0; }
-  .photo { width:180px; height:180px; border-radius:12px; object-fit:cover; margin-bottom:16px; margin-top:20px; }
-  .photo.golden { border:3px solid #FFD700; }
-  .photo.alumni { border:3px solid #E6BE3A; }
-  .photo.challenger { border:3px solid #C0C0C0; }
-  .name { font-size:1.6em; font-weight:800; margin-bottom:4px; }
-  .name.golden { color:#fff; }
-  .name.alumni { color:#FFD700; }
-  .name.challenger { color:#EFEFEF; }
-  .location { color:#888; font-size:0.85em; margin-bottom:6px; }
-  .role { font-size:0.8em; margin-bottom:16px; }
-  .role.golden { color:#FFD700; }
-  .role.alumni { color:#E6BE3A; }
-  .role.challenger { color:#C0C0C0; }
-  .title { color:#ccc; font-size:0.85em; margin-bottom:16px; }
+  .card { width:500px; min-height:520px; border-radius:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:30px; }
+  .card.golden { background:linear-gradient(135deg,#B8860B,#FFD700,#B8860B); }
+  .card.alumni { background:linear-gradient(135deg,#8B6914,#C9A020,#8B6914); }
+  .card.challenger { background:linear-gradient(135deg,#707080,#C0C0C0,#707080); }
+  .logo { position:absolute; top:20px; left:20px; font-size:1.2em; font-weight:800; }
+  .card.golden .logo { color:#151528; }
+  .card.alumni .logo { color:#151528; }
+  .card.challenger .logo { color:#151528; }
+  .badge { position:absolute; top:16px; right:20px; padding:4px 12px; border-radius:12px; font-size:0.7em; font-weight:700; background:rgba(0,0,0,0.3); color:#fff; }
+  .photo { width:180px; height:180px; border-radius:12px; object-fit:cover; margin-bottom:16px; margin-top:20px; border:3px solid rgba(0,0,0,0.3); }
+  .name { font-size:1.6em; font-weight:800; margin-bottom:4px; color:#151528; }
+  .location { color:rgba(0,0,0,0.6); font-size:0.85em; margin-bottom:6px; }
+  .role { font-size:0.85em; margin-bottom:12px; font-weight:700; color:#151528; }
+  .title { color:rgba(0,0,0,0.7); font-size:0.85em; margin-bottom:16px; }
   .tags { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; margin-bottom:16px; }
-  .tag.golden { background:linear-gradient(135deg,#FFD700,#B8860B); color:#151528; padding:3px 10px; border-radius:10px; font-size:0.7em; font-weight:700; }
-  .tag.alumni { background:linear-gradient(135deg,#F0D060,#D4A830); color:#151528; padding:3px 10px; border-radius:10px; font-size:0.7em; font-weight:700; }
-  .tag.challenger { background:linear-gradient(135deg,#D4D4DC,#909098); color:#151528; padding:3px 10px; border-radius:10px; font-size:0.7em; font-weight:700; }
+  .tag { background:rgba(0,0,0,0.2); color:#fff; padding:4px 12px; border-radius:10px; font-size:0.7em; font-weight:700; }
   .linkedin a { background:#0077B5; color:#fff; padding:4px 10px; border-radius:6px; text-decoration:none; font-size:0.7em; font-weight:700; }
 </style>
 </head>
@@ -52,7 +39,6 @@
   <input type="text" id="name" placeholder="Full Name" oninput="update()">
   <input type="text" id="loc" placeholder="City, Region, UK" oninput="update()">
   <input type="text" id="role" placeholder="Role (Chapter Lead, Member...)" oninput="update()">
-  <input type="text" id="date" placeholder="Certified on (YYYY-MM-DD)" oninput="update()">
   <input type="text" id="title" placeholder="Title (e.g. Cloud Architect | 12x AWS)" oninput="update()">
   <input type="text" id="tags" placeholder="Tags (comma separated)" oninput="update()">
   <input type="text" id="linkedin" placeholder="LinkedIn URL" oninput="update()">
@@ -60,29 +46,22 @@
 </div>
 <div class="card golden" id="card">
   <div class="logo">GJ <span>UK</span></div>
-  <div class="badge golden" id="cardBadge">🏆 Golden Jacket</div>
-  <div class="card-inner">
-    <img class="photo golden" id="cardPhoto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect fill='%231a1a30' width='180' height='180'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' fill='%23666' font-size='14'%3EPhoto%3C/text%3E%3C/svg%3E">
-    <div class="name golden" id="cardName">Member Name</div>
-    <div class="location" id="cardLoc">City, Region, UK</div>
-    <div class="role golden" id="cardRole">🏆 Golden Jacket Member</div>
-    <div class="title" id="cardTitle">Cloud Architect | 12x AWS Certified</div>
-    <div class="tags" id="cardTags"><span class="tag golden">Golden Jacket</span></div>
-    <div class="linkedin" id="cardLinkedin"><a href="#">in</a></div>
-  </div>
+  <div class="badge" id="cardBadge">🏆 Golden Jacket</div>
+  <img class="photo" id="cardPhoto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect fill='%231a1a30' width='180' height='180'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' fill='%23666' font-size='14'%3EPhoto%3C/text%3E%3C/svg%3E">
+  <div class="name" id="cardName">Member Name</div>
+  <div class="location" id="cardLoc">City, Region, UK</div>
+  <div class="role" id="cardRole">🏆 Golden Jacket Member</div>
+  <div class="title" id="cardTitle">Cloud Architect | 12x AWS Certified</div>
+  <div class="tags" id="cardTags"><span class="tag">Golden Jacket</span></div>
+  <div class="linkedin" id="cardLinkedin"><a href="#">in</a></div>
 </div>
 <script>
 var labels = { golden:'Golden Jacket', alumni:'Alumni', challenger:'Challenger' };
 var icons = { golden:'🏆', alumni:'🎖️', challenger:'⚡' };
 function update() {
   var cat = document.getElementById('category').value;
-  var card = document.getElementById('card');
-  card.className = 'card ' + cat;
-  document.getElementById('cardBadge').className = 'badge ' + cat;
+  document.getElementById('card').className = 'card ' + cat;
   document.getElementById('cardBadge').textContent = icons[cat] + ' ' + labels[cat];
-  document.getElementById('cardPhoto').className = 'photo ' + cat;
-  document.getElementById('cardName').className = 'name ' + cat;
-  document.getElementById('cardRole').className = 'role ' + cat;
   var n = document.getElementById('name').value;
   var l = document.getElementById('loc').value;
   var r = document.getElementById('role').value;
@@ -94,9 +73,9 @@ function update() {
   document.getElementById('cardRole').textContent = icons[cat] + ' ' + labels[cat] + ' ' + (r || 'Member');
   if(ti) document.getElementById('cardTitle').textContent = ti;
   if(tags) {
-    document.getElementById('cardTags').innerHTML = tags.split(',').map(function(x){ return '<span class="tag '+cat+'">'+x.trim()+'</span>'; }).join('');
+    document.getElementById('cardTags').innerHTML = tags.split(',').map(function(x){ return '<span class="tag">'+x.trim()+'</span>'; }).join('');
   } else {
-    document.getElementById('cardTags').innerHTML = '<span class="tag '+cat+'">' + labels[cat] + '</span>';
+    document.getElementById('cardTags').innerHTML = '<span class="tag">' + labels[cat] + '</span>';
   }
   if(li) document.getElementById('cardLinkedin').innerHTML = '<a href="'+li+'" target="_blank">in</a>';
 }
