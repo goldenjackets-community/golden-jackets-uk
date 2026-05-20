@@ -535,8 +535,9 @@ async function mergePR(number) {
   }
 }
 async function rejectPR(number) {
-  if (!confirm('Reject PR #' + number + '? This cannot be undone.')) return;
-  var data = await adminCall('close-pr', {pr_number: number});
+  var reason = prompt('Reason for rejection (will be sent to the author):');
+  if (!reason) return;
+  var data = await adminCall('close-pr', {pr_number: number, reason: reason});
   if (data && data.message) {
     document.getElementById('adminOutput').innerHTML = '<span style="color:#f44336;">❌ ' + data.message + '</span>';
   }
