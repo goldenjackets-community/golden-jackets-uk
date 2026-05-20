@@ -510,13 +510,17 @@ async function uploadPhoto() {
   var file = document.getElementById('photoFile').files[0];
   var msg = document.getElementById('photoMsg');
   if (!name || !file) { msg.innerHTML = '<span style="color:#f44336;">Please enter name and select a photo.</span>'; return; }
+  if (file.size > 5000000) { msg.innerHTML = '<span style="color:#f44336;">Photo too large. Max 5MB.</span>'; return; }
   msg.innerHTML = '<span style="color:#FFD700;">Uploading...</span>';
   var reader = new FileReader();
   reader.onload = async function() {
-    var base64 = reader.result.split(',')[1];
-    var data = await adminCall('update-photo', {name: name, photo: base64, filename: file.name});
-    if (data && data.message) { msg.innerHTML = '<span style="color:#4CAF50;">✅ ' + data.message + '</span>'; }
-    else { msg.innerHTML = '<span style="color:#f44336;">❌ Error: ' + (data && data.error || 'Unknown') + '</span>'; }
+    try {
+      var base64 = reader.result.split(',')[1];
+      var resp = await fetch(ADMIN_API, {method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+sessionStorage.getItem('gj_token')}, body: JSON.stringify({action:'update-photo', chapter: GJ_CONFIG.CHAPTER, name: name, photo: base64, filename: file.name})});
+      var data = await resp.json();
+      if (data.message) { msg.innerHTML = '<span style="color:#4CAF50;">✅ ' + data.message + '</span>'; }
+      else { msg.innerHTML = '<span style="color:#f44336;">❌ ' + (data.error || 'Unknown error') + '</span>'; }
+    } catch(e) { msg.innerHTML = '<span style="color:#f44336;">❌ Error: ' + e.message + '</span>'; }
   };
   reader.readAsDataURL(file);
 }
