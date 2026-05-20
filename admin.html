@@ -113,6 +113,11 @@
         <div class="label">Card Generator</div>
         <div class="desc">Generate member cards</div>
       </a>
+      <div class="tool-btn" onclick="showChangePhoto()">
+        <div class="icon">📷</div>
+        <div class="label">Change Photo</div>
+        <div class="desc">Update a member's photo</div>
+      </div>
       <div class="tool-btn" onclick="exportCSV()">
         <div class="icon">📥</div>
         <div class="label">Export CSV</div>
@@ -541,5 +546,28 @@ async function rejectPR(number) {
   if (data && data.message) {
     document.getElementById('adminOutput').innerHTML = '<span style="color:#f44336;">❌ ' + data.message + '</span>';
   }
+}
+function showChangePhoto() {
+  var out = document.getElementById('adminOutput');
+  out.innerHTML = '<strong style="color:#FFD700;">📷 Change Member Photo</strong><br><br>' +
+    '<input id="photoName" placeholder="Member name (e.g. Raul Mihai)" style="width:100%;padding:8px;margin-bottom:8px;background:#1a1a30;border:1px solid #2a2a45;border-radius:6px;color:#e0e0e0;"><br>' +
+    '<input id="photoFile" type="file" accept="image/*" style="margin-bottom:12px;color:#e0e0e0;"><br>' +
+    '<button onclick="uploadPhoto()" style="padding:8px 20px;background:linear-gradient(135deg,#FFD700,#B8860B);border:none;border-radius:6px;color:#151528;font-weight:700;cursor:pointer;">Upload & Update</button>' +
+    '<p id="photoMsg" style="margin-top:8px;font-size:0.85em;"></p>';
+}
+async function uploadPhoto() {
+  var name = document.getElementById('photoName').value.trim();
+  var file = document.getElementById('photoFile').files[0];
+  var msg = document.getElementById('photoMsg');
+  if (!name || !file) { msg.innerHTML = '<span style="color:#f44336;">Please enter name and select a photo.</span>'; return; }
+  msg.innerHTML = '<span style="color:#FFD700;">Uploading...</span>';
+  var reader = new FileReader();
+  reader.onload = async function() {
+    var base64 = reader.result.split(',')[1];
+    var data = await adminCall('update-photo', {name: name, photo: base64, filename: file.name});
+    if (data && data.message) { msg.innerHTML = '<span style="color:#4CAF50;">✅ ' + data.message + '</span>'; }
+    else { msg.innerHTML = '<span style="color:#f44336;">❌ Error: ' + (data && data.error || 'Unknown') + '</span>'; }
+  };
+  reader.readAsDataURL(file);
 }
 </script>
