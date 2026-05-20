@@ -498,6 +498,7 @@ async function listAllUsers() {
 }
 function showChangePhoto() {
   var out = document.getElementById('adminOutput');
+  out.style.display = 'block';
   out.innerHTML = '<strong style="color:#FFD700;">📷 Change Member Photo</strong><br><br>' +
     '<input id="photoName" placeholder="Member name (e.g. Raul Mihai)" style="width:100%;padding:8px;margin-bottom:8px;background:#1a1a30;border:1px solid #2a2a45;border-radius:6px;color:#e0e0e0;"><br>' +
     '<input id="photoFile" type="file" accept="image/*" style="margin-bottom:12px;color:#e0e0e0;"><br>' +
