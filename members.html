@@ -503,9 +503,11 @@ async function confirmMfaSetup() {
 }
 
 function signOut() {
+  if (window._gjTracker) window._gjTracker("logout");
   sessionStorage.removeItem('gj_token');
   sessionStorage.removeItem('gj_access');
   sessionStorage.removeItem('gj_email');
+  sessionStorage.removeItem('gj_session_id');
   document.getElementById('loginBox').style.display = 'block';
   document.getElementById('content').style.display = 'none';
 }
@@ -639,6 +641,19 @@ async function confirmReset() {
     msg.innerHTML = '<span style="color:#f44336">❌ Error resetting password</span>';
   }
 }
+</script>
+<script>
+(function(){
+  var TRACKER_URL='https://uf3x2i7xr7rziz4nswkmsd4k5i0dunaj.lambda-url.us-east-1.on.aws/';
+  var heartbeatTimer=null;
+  function getSessionId(){var s=sessionStorage.getItem('gj_session_id');if(!s){s=Date.now().toString(36)+Math.random().toString(36).substr(2,9);sessionStorage.setItem('gj_session_id',s);}return s;}
+  function track(action,page){var email=sessionStorage.getItem('gj_email');if(!email)return;try{navigator.sendBeacon(TRACKER_URL,JSON.stringify({email:email,action:action,page:page||location.pathname,session_id:getSessionId()}));}catch(e){}}
+  window._gjTracker=track;
+  var origShowContent=window.showContent;
+  window.showContent=function(email){origShowContent(email);track('session_start','/members');if(heartbeatTimer)clearInterval(heartbeatTimer);heartbeatTimer=setInterval(function(){track('heartbeat');},60000);};
+  document.addEventListener('visibilitychange',function(){if(document.hidden){track('tab_hidden');}else{track('tab_visible');}});
+  window.addEventListener('beforeunload',function(){track('page_leave');});
+})();
 </script>
 </body>
 </html>
