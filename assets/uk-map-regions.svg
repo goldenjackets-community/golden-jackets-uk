@@ -627,7 +627,7 @@
   </circle>
  </g>
 <!-- Region Labels -->
-<text x="700" y="555" fill="#888" font-size="9" text-anchor="middle" font-weight="600">NE</text>
+<text x="680" y="550" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">NE</text>
 <text x="655" y="670" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">NW</text>
 <text x="720" y="640" fill="#888" font-size="9" text-anchor="middle" font-weight="600">YH</text>
 <text x="720" y="720" fill="#888" font-size="9" text-anchor="middle" font-weight="600">EM</text>
