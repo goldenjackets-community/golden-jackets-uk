@@ -67,7 +67,7 @@
     .music-toggle:hover { border-color: var(--gold); }
 
     .join-btn {
-      position: absolute; top: 95px; left: 55px; z-index: 999;
+      position: relative; top: auto; left: auto; z-index: 999;
       background: none; border: none; cursor: pointer;
       filter: drop-shadow(0 0 15px rgba(255,215,0,0.4));
       transition: all 0.3s;
@@ -327,8 +327,8 @@
       nav .links { display: none; }
       .ticker { display: none; }
       .hamburger { display: block; }
-      .join-btn { top: 70px; left: 15px; transform: none; }
-      .join-btn img { width: 50px; height: 50px; }
+      .join-btn { transform: none; }
+      .join-btn img { width: 60px; height: 60px; }
       .join-btn span { font-size: 0.7em !important; }
       .hero h1 { font-size: 1.8em; }
       .stats-bar { flex-wrap: wrap; gap: 20px; padding: 20px; }
@@ -419,6 +419,10 @@
       <span data-i18n="getInTouch">Already a Golden Jacket holder from United Kingdom?</span> <a href="https://www.linkedin.com/company/golden-jackets-uk" target="_blank">Get in touch</a> to join the community and be featured on this page.
     </p>
   </section>
+
+  <div style="text-align:center;padding:20px 0;">
+    <button class="join-btn" onclick="document.getElementById('applyForm').classList.add('open');document.querySelector('.cta').scrollIntoView({behavior:'smooth'})" title="Join Golden Jackets UK" style="position:relative;top:auto;left:auto;"><img src="assets/jacket-uk.png" width="72" style="height:auto;" alt="Join"><span style="display:block;font-size:0.9em;color:#FFD700;font-weight:700;margin-top:6px;">Join Us</span></button>
+  </div>
 
   <section id="about" style="max-width:800px;margin:0 auto;padding:20px 20px;text-align:center;">
     <h2 style="font-size:1.6em;color:var(--gold);margin-bottom:20px;">About Us</h2>
@@ -1259,7 +1263,6 @@
     <button class="chat-opt" onclick="chatAnswer('contact')">Contact us</button>
   </div>
 </div>
-<button class="join-btn" onclick="document.getElementById('applyForm').classList.add('open');document.querySelector('.cta').scrollIntoView({behavior:'smooth'})" title="Join Golden Jackets UK"><img src="assets/jacket-uk.png" width="72" style="height:auto;" alt="Join"><span style="display:block;font-size:0.9em;color:#FFD700;font-weight:700;margin-top:6px;">Join Us</span></button>
 <a href="https://tutorialsdojo.com" target="_blank" rel="noopener noreferrer" class="partner-float" title="Official Partner — Tutorials Dojo" style="position:absolute;top:95px;right:55px;z-index:999;background:none;border:none;cursor:pointer;filter:drop-shadow(0 0 15px rgba(255,215,0,0.4));transition:all 0.3s;animation:float 3s ease-in-out infinite;animation-delay:1.5s;text-align:center;text-decoration:none;"><img src="assets/tutorialsdojo-logo.png" width="100" alt="Tutorials Dojo" style="border-radius:8px;"><span style="display:block;font-size:0.7em;color:#FFD700;font-weight:700;margin-top:2px;" class="partner-label">Partner</span></a>
 <a href="https://sundog-education.com" target="_blank" rel="noopener noreferrer" class="partner-float" title="Official Partner — Sundog Education" style="position:absolute;top:195px;right:55px;z-index:999;background:none;border:none;cursor:pointer;filter:drop-shadow(0 0 15px rgba(255,215,0,0.4));transition:all 0.3s;animation:float 3s ease-in-out infinite;animation-delay:2.5s;text-align:center;text-decoration:none;"><img src="assets/partners/sundogeducation.png" width="90" alt="Sundog Education" style="border-radius:8px;"><span style="display:block;font-size:0.7em;color:#FFD700;font-weight:700;margin-top:2px;" class="partner-label">Partner</span></a>
 <a href="https://www.udemy.com/user/chetanawsdevops/" target="_blank" rel="noopener noreferrer" class="partner-float" title="Official Partner — AWS with Chetan" style="position:absolute;top:295px;right:55px;z-index:999;background:none;border:none;cursor:pointer;filter:drop-shadow(0 0 15px rgba(255,215,0,0.4));transition:all 0.3s;animation:float 3s ease-in-out infinite;animation-delay:3.5s;text-align:center;text-decoration:none;"><img src="assets/partners/aws-with-chetan.png" width="90" alt="AWS with Chetan" style="border-radius:8px;"><span style="display:block;font-size:0.7em;color:#FFD700;font-weight:700;margin-top:2px;" class="partner-label">Partner</span></a>
