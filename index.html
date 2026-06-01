@@ -1355,6 +1355,8 @@ async function submitApplication() {
     }
   } catch(e) {
     msg.innerHTML = '<span style="color:#f44336">❌ Error: ' + e.message + '</span>';
+  } finally {
+    window._submitting = false;
   }
 }
 
