@@ -800,14 +800,14 @@
 <!-- Region Labels -->
 <text x="680" y="550" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">NE</text>
 <text x="655" y="670" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">NW</text>
-<text x="720" y="640" fill="#888" font-size="9" text-anchor="middle" font-weight="600">YH</text>
-<text x="720" y="720" fill="#888" font-size="9" text-anchor="middle" font-weight="600">EM</text>
-<text x="680" y="760" fill="#888" font-size="9" text-anchor="middle" font-weight="600">WM</text>
+<text x="720" y="640" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">YH</text>
+<text x="720" y="720" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">EM</text>
+<text x="680" y="760" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">WM</text>
 <text x="800" y="780" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">EE</text>
 <text x="785" y="838" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">LDN</text>
 <text x="740" y="870" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">SE</text>
 <text x="630" y="880" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">SW</text>
 <text x="590" y="400" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">SCT</text>
 <text x="615" y="780" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">WLS</text>
-<text x="460" y="590" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">NI</text>
+<text x="460" y="580" style="fill:#fff;stroke:none" font-size="9" text-anchor="middle" font-weight="600">NI</text>
 </svg>
